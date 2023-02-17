@@ -1,6 +1,6 @@
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+
 <title>Account</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -59,7 +59,7 @@ h1 {
 
 </style>
 
-    <body class="h-100">
+    <body>
    
     
     	<div class="container h-90 pt-5" style="margin-right:900px ">
@@ -82,6 +82,7 @@ h1 {
                 </div>
             </div>
 </div>
+</body>
         <!-- <script> -->
         <!-- <h1><center><div class="p-3 mb-2 bg- text-black" >Details</div></center></h1>
         <div style="margin-left:200px">

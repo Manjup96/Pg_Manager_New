@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -80,7 +80,7 @@ h1 {
   }
 </style>
 		
-    <body class="h-100">
+    <body>
 
  
  
@@ -131,7 +131,7 @@ h1 {
             </div>
         </div>
 
-
+</body>
 
         <script>
  var form=document.getElementById('news');

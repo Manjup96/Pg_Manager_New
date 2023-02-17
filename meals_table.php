@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+   <body style="background-color:#ececec;"> 
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -96,7 +96,7 @@ h1 {
 
 </style>
 		
-    <body class="h-0">
+    <body>
     
 <?php
 
@@ -177,7 +177,7 @@ h1 {
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
                     <div style="margin-left:50px;width:720px">
-                    <center><div class="p-3 mb-2 bg-dark text-white">Meals details</div></center>
+                    <center><div class="p-3 mb-2 bg text-black">Meals details</div></center>
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
@@ -192,6 +192,7 @@ h1 {
 <div style="margin-left:50px" id="show_table">
   <table id="Meals" border="1"></table>
 </div>
+</body>
 
 <script >
 $(function(){

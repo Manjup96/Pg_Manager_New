@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-
+<body style="background-color:#ececec;">
   <title>Configure </title>
  	<!-- Required meta tags -->
    <meta charset="utf-8">

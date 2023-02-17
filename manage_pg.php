@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:white;">
+<body style="background-color:#ececec;">
   <title>Admin</title>
  	<!-- Required meta tags -->
      <meta charset="utf-8">
@@ -27,7 +27,7 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-        <?php
+<?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
@@ -77,10 +77,11 @@ h1 {
     color:black;
 }
 </style>
+
 <body>
 
  <div class="wrapper" style="margin-right:700px"> 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="mt-2 mb-6 " style="width:850px">
@@ -100,7 +101,7 @@ h1 {
                  <div class="col-md-12 lead">
                      <div class="mt-2 mb-6 clearfix">
                      <div style="margin-left:50px;width:1600px">
-                     <center><div class="p-3 mb-2  mr-5 bg-dark text-white" style ="font-size:30px">Manage details</div></center>
+                     <center><div class="p-3 mb-2  mr-5 bg text-black" style ="font-size:30px">Manage details</div></center>
                    
                      
 
@@ -110,6 +111,7 @@ h1 {
  <div style="margin-left:50px" id="show_table">
     <table id="create" border="1"></table>
   </div>
+</body>
   <script>
 
 

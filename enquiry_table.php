@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ffffff;">
+<!-- <body style="background-color:#ffffff;"> -->
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -96,12 +96,12 @@ textarea{
   }
   </style>
 		
-    <body class="h-0">
+    <body>
     
-<?php
+ <?php
 
 // echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
+?> 
 <div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
@@ -184,7 +184,7 @@ textarea{
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
                     <div style="margin-left:50px;width:1020px">
-                    <center><div class="p-3 mb-2 bg-dark text-white">Enquiry Details</div></center> 
+                    <center><div class="p-3 mb-2 bg text-black">Enquiry Details</div></center> 
   
                     <div class="search-container">
                     <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
@@ -202,6 +202,15 @@ textarea{
      <div style="margin-left:30px" id="show_table">
       <table id="enquiry" border="1"></table>
   </div>
+
+  </div>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+                 </div> 
+    </div>
+                </body>
                     <script>
                       // to show pop up 
                       document.getElementById("show_edit_form").style.display="none";

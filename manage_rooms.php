@@ -14,6 +14,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<body style="background-color:#ececec;">
   <title>Bootstrap 5 Example</title>
  	<!-- Required meta tags -->
    <meta charset="utf-8">
@@ -130,7 +131,7 @@
     
     </div>
   </div>
-
+</body>
 <script>
    document.getElementById("data").style.display="block";
 </script>

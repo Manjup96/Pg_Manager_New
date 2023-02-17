@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+<body style="background-color:#ececec;">
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -27,7 +27,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="./assets/css/style.css"></link>
-
 
        <?php
             include "./adminHeader.php";
@@ -81,8 +80,8 @@ h1 {
     }
 
 </style>
-		<script type="text/javascript" src="./assets/js/script.js"></script>
-    <body class="h-0">
+
+    <body >
         
  <div class="form_group mt-5 text-center">
  
@@ -94,20 +93,20 @@ h1 {
  </script>
  </div>
     
-<?php
+<!-- <?php
 
 // echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
+?> -->
 
          
-    
+<script type="text/javascript" src="./assets/js/script.js"></script> 
    <div class="wrapper" style="margin-right:700px" >
         <div class="container-fluid" >
             <div class="row">
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
                     <div style="margin-left:50px;width:1020px">
-                    <center><div class="p-3 mb-2 bg-dark text-white">complaints details</div></center>
+                    <center><div class="p-3 mb-2 bg text-black" >Complaints details</div></center>
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
@@ -160,48 +159,20 @@ h1 {
     </div>
     </div>
     </div>
-  <!-- Edit form ends  -->
-<script>
+   
 
-document.getElementById("save_response").disabled = true;
-var response_check=0;
-
-
-function check()
-{
-  if(response_check==1 )
-  { 
-      document.getElementById("save_response").disabled = false;
-  }
-  else
-  {
-  document.getElementById("save_response").disabled = true;
-  }
-}
-
-function validateResponse(){
-    var response1 = document.getElementById("response").value;
-    console.log("response1=",response1);
-    if((response1.length>=10 )&& (response1.length<=30))
-    {
-     document.getElementById("response_error").style.display="none";
-     response_check=1;
-        }
-    else{
-    document.getElementById("response_error").style.display="block";
-     response_check=0;
-    }
-    check();
-}
-
-
-</script>
 
 
 <div style="margin-left:50px" id="show_table">
                     <table id="complaint" border="1"></table>
 </div>
-
+  </div>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+                 </div> 
+    </div>
 
 
 <!--<div  id="show_response_form">-->
@@ -323,8 +294,43 @@ function validateResponse(){
             </div>
         </div>
     </div>
+    </body>
+  <!-- Edit form ends  -->
+  <script>
+
+document.getElementById("save_response").disabled = true;
+var response_check=0;
 
 
+function check()
+{
+  if(response_check==1 )
+  { 
+      document.getElementById("save_response").disabled = false;
+  }
+  else
+  {
+  document.getElementById("save_response").disabled = true;
+  }
+}
+
+function validateResponse(){
+    var response1 = document.getElementById("response").value;
+    console.log("response1=",response1);
+    if((response1.length>=10 )&& (response1.length<=30))
+    {
+     document.getElementById("response_error").style.display="none";
+     response_check=1;
+        }
+    else{
+    document.getElementById("response_error").style.display="block";
+     response_check=0;
+    }
+    check();
+}
+
+
+</script>
 
 <script>
  $(document).ready(function(){

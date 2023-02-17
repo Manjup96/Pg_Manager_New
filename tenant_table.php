@@ -1,6 +1,8 @@
+
+<!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ffffff;">
+<body style="background-color:#ececec;">
 <title>tenant form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -92,16 +94,14 @@ textarea{
     font-size:16px;
   }
 </style>
-<!-- <body class="h-0" onload=start()> -->
-<body class="h-0" >
+
+
   <link rel="stylesheet" href="./assets/css/tenant_table.css">
   </link>
-  <!--<script type="text/javascript" src="./assets/js/tenant/delete.js"></script>-->
+
   <script type="text/javascript" src="./assets/js/tenant/filtertable.js"></script>
-  <!-- <script type="text/javascript" src="./assets/js/tenant/getall.js"></script> -->
   <script type="text/javascript" src="./assets/js/tenant/getsingle.js"></script>
-  <!--<script type="text/javascript" src="./assets/js/tenant/edit_form.js"></script>-->
-  <!--<script type="text/javascript" src="./assets/js/tenant/updatedate.js"></script>-->
+  <script type="text/javascript" src="./assets/js/tenant/validations.js"></script>
 
   
         <!-- disable previous dates in Input date type -->
@@ -110,9 +110,10 @@ textarea{
 
 
  
-  <script type="text/javascript" src="./assets/js/tenant/validations.js"></script>
+
   <!-- open nav and close nav realated js is script.js -->
   <script type="text/javascript" src="./assets/js/script.js"></script>
+  <body>
  
  <div class="form_group mt-5 text-center">
  
@@ -205,7 +206,7 @@ function change_JoiningDate() {
           <div class="mt-2 mb-6 clearfix">
             <div style="margin-left:50px;width:830px">
               <center>
-                <div class="p-3 mb-2 text-black" style="background-color:#bfbfbf">Tenant Details</div>
+                <div class="p-3 mb-2 bg text-black" >Tenant Details</div>
               </center>
 
               <div class="search-container">
@@ -228,6 +229,14 @@ function change_JoiningDate() {
               <table id="tenants" border="1"></table>
 </div>
 
+</div>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+                 </div> 
+    </div>
+                </body>
       
   <!-- tde Modal -->
   <div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">

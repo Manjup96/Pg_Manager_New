@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+
   <title>Income</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -91,7 +91,7 @@ h1 {
   }
 </style>
 		
-    <body class="h-0">
+    <body>
     
 <?php
 
@@ -160,7 +160,7 @@ h1 {
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
                     <div style="margin-left:50px;width:730px">
-                    <center><div class="p-3 mb-2 bg-dark text-white">Monthly wise Income Details</div></center>
+                    <center><div class="p-3 mb-2 bg text-black">Monthly wise Income Details</div></center>
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search"
@@ -210,6 +210,7 @@ h1 {
                  </div> 
               </div>
        </div>
+</body>
        <!-- /.modal  End -->    
     
           

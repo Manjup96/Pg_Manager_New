@@ -1,6 +1,6 @@
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+<!-- <body style="background-color:#D6DBDF;"> -->
 <title>Building form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -59,7 +59,7 @@ h1 {
 
 </style>
 
-    <body class="h-100">
+    <body>
    
     
     	<div class="container h-90" style="margin-right:900px">

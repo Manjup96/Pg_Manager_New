@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+<!-- <body style="background-color:#D6DBDF;"> -->
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -70,7 +70,7 @@ h1 {
 } */
 </style>
 		
-    <body class="h-90">
+    <body>
    <div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
@@ -93,7 +93,7 @@ h1 {
             <div class="row">
                 <div class="col-md-12">
                     <div class="mt-2 mb-6 clearfix" style="width:1060px">
-                    <center><div class="p-3 mb-2 bg-dark text-white" >Rooms Details</div></center>
+                    <center><div class="p-3 mb-2 bg text-black" >Rooms Details</div></center>
                    
                     <div class="search-container" >
                      <input type="text" placeholder="Search.." name="search" id="searchInput" onkeyup="searchTable()">
@@ -112,7 +112,7 @@ h1 {
 
 </br>
                     
-
+    </body>
 <!--<script>-->
 <!--    function selectedBuilding(){-->
 <!--        var selected_building= document.getElementById("building").value;;-->

@@ -1,32 +1,30 @@
+
 <?php
    session_start();
    include_once "./config/dbconnect.php";
-
+ 
 ?>
 <head>
 <style>
-h2 {
-  text-align: center;
-  color: dark;
-}
+h2 {text-align: center;}
 
-</style>  
 
+</style>     
 </head>
  <!-- nav -->
  
-<nav  class="navbar navbar-expand-lg navbar-light px-5" style="background-color:#434242;">
+<nav  class="navbar navbar-expand-lg navbar-light px-5" style="background-color:white;">
 <div style="margin-left:150px">
     <a class="navbar-brand ml-5" href="./index.php" >
        <img src="./assets/images/logo.png" width="80" height="80" alt="Swiss Collection">
     </a>
 </div>
-     <h2 style="color:white"> PG Manager</h2>
+     <h2 style="color:Black"> PG Manager</h2>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
+   
     <div class="topbar-divider d-none d-sm-block"></div>
-
     
-    <div class="user-cart">  
+   <div class="user-cart">  
         <?php           
         if(isset($_SESSION['user_id'])){
           ?>

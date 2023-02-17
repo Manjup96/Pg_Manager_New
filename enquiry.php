@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ffffff;">
+<!-- <body style="background-color:#ffffff;"> -->
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -85,6 +85,7 @@ textarea{
     font-size:16px;
   }
 </style>
+<body>
 		<div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
@@ -166,21 +167,20 @@ textarea{
                 </div>
             </div>
         </div>
-<script>
-  //document.getElementById("enquiryJoinDate").valueAsDate = new Date();
 
-  </script>
 
 <div class="form_group mt-5 text-center" hidden>
  
  The Selected buiding id : <b> <span id="building"></span></b>
+ 
+ 
+ </div>
+</body>
  <script>
  document.getElementById("building").innerHTML=
      localStorage.getItem("selected_building1");
      //var buidling_name =  localStorage.getItem("selected_building1");
  </script>
- 
- </div>
 <script>
  var form=document.getElementById('enquiry');
 

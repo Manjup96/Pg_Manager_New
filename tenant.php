@@ -1,6 +1,6 @@
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ffffff;">
+<body style="background-color:#ececec;">
 <title>tenant form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -84,7 +84,7 @@ textarea{
   }
 </style>
 
-
+<body>
 
   <div class="form_group mt-5 text-center">
  
@@ -184,6 +184,7 @@ textarea{
                 </div>
             </div>
         </div>
+        </body>
         <script type="text/javascript" src="./assets/js/script.js"></script>
         <!-- <script type="text/javascript" src="./assets/js/tenantFormValidation.js"></script> -->
         <script type="text/javascript" src="./assets/js/tenantRegistration.js"></script>

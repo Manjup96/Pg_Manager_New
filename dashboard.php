@@ -2,7 +2,7 @@
 <html>
 <head>
    
-<body style="background-color:#ffffff;">
+
   <title>Admin</title>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">

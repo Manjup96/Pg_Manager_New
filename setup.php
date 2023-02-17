@@ -1,8 +1,8 @@
 
-
+<!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-
+<body style="background-color:#ececec;">
 <title>Building form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -48,9 +48,9 @@
 }
 
 /* Darker background on mouse-over */
-.btn:hover {
+/* .btn:hover {
   background-color: #ABEBC6;
-}
+} */
 p.two {
   border-style: solid;
   border-width: medium;
@@ -63,10 +63,8 @@ h1 {
 
 </style>
 
-    <body class="h-100">
-   
-    
-    	<div class="container h-90 pt-5" style="margin-right:900px ">
+    <!-- <body> -->
+   <div class="container h-90 pt-5" style="margin-right:900px ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-10" style="  border-style: solid;border-width: 3px;border-radius: 20px;
                  padding: 10px;box-shadow: 5px 10px #76D7C4;">
