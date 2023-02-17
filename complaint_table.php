@@ -81,7 +81,11 @@ h1 {
 
 </style>
 
-    <body >
+    <body>
+       <?php
+
+// echo "Hello " . $_SESSION["username"] . ".<br>";
+?>
         
  <div class="form_group mt-5 text-center">
  
@@ -93,10 +97,7 @@ h1 {
  </script>
  </div>
     
-<!-- <?php
 
-// echo "Hello " . $_SESSION["username"] . ".<br>";
-?> -->
 
          
 <script type="text/javascript" src="./assets/js/script.js"></script> 
@@ -105,7 +106,7 @@ h1 {
             <div class="row">
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
-                    <div style="margin-left:50px;width:1020px">
+                    <div style="margin-left:50px;width:750px">
                     <center><div class="p-3 mb-2 bg text-black" >Complaints details</div></center>
                     
                     <div class="search-container">
@@ -116,11 +117,7 @@ h1 {
 
 </div>
 </div>
- </div>
-      </div>
-    </div>
-    </div>
-    </div>
+
 </br> 
   
           
@@ -166,14 +163,12 @@ h1 {
 <div style="margin-left:50px" id="show_table">
                     <table id="complaint" border="1"></table>
 </div>
-  </div>
-                        </div>
-                     </div>
-                   </div>
-                 </div>
-                 </div> 
+</div>
+      </div>
     </div>
-
+    </div>
+    </div>
+  </body>
 
 <!--<div  id="show_response_form">-->
 <!--    <h1>In Form </h1>-->
@@ -294,7 +289,7 @@ h1 {
             </div>
         </div>
     </div>
-    </body>
+
   <!-- Edit form ends  -->
   <script>
 

@@ -1,6 +1,6 @@
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ececec;">
+<!-- <body style="background-color:#ececec;"> -->
 <title>tenant form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -89,16 +89,11 @@ textarea{
   <div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
- <script>
- document.getElementById("building").innerHTML=
-     localStorage.getItem("selected_building1");
-     //var building_name =  localStorage.getItem("selected_building1");
-     
- </script>
+ 
 
  </div>
 
-    <body class="h-100">
+    <!-- <body class="h-100"> -->
     <a href="tenant_table.php"  > <div style="margin-left:910px">
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>    
     	<div class="container h-90">
@@ -192,6 +187,15 @@ textarea{
            document.getElementById("tenantJoiningDate").valueAsDate = new Date();
 
           </script>
+
+
+<script>
+  // selecting building script
+ document.getElementById("building").innerHTML=
+     localStorage.getItem("selected_building1");
+     //var building_name =  localStorage.getItem("selected_building1");
+     
+ </script>
 
    <!--disable previous dates in Input date type -->
 

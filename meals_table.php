@@ -187,10 +187,16 @@ h1 {
 
 </div>
 </div>
+
 </br> 
 
 <div style="margin-left:50px" id="show_table">
   <table id="Meals" border="1"></table>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </body>
 

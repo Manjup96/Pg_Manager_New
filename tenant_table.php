@@ -113,16 +113,13 @@ textarea{
 
   <!-- open nav and close nav realated js is script.js -->
   <script type="text/javascript" src="./assets/js/script.js"></script>
+
   <body>
  
  <div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
- <script>
- document.getElementById("building").innerHTML=
-     localStorage.getItem("selected_building1");
-     //var buidling_name =  localStorage.getItem("selected_building1");
- </script>
+ 
 
  </div>
  
@@ -175,11 +172,7 @@ textarea{
                 name="tenantJoiningDate" readonly onclick="change_JoiningDate();">
             </div>
             
-<script>
-function change_JoiningDate() {
-  document.getElementById("tenantJoiningDate").readOnly = false;
-}
-</script>
+
             <div class="form-group">
                       <label for="tenantComments">Comments</label>
                       <textarea id="tenantComments" name="tenantComments" placeholder="" rows="3" cols="38" style="height:150px" onkeyup="validateComments()">
@@ -234,9 +227,7 @@ function change_JoiningDate() {
                      </div>
                    </div>
                  </div>
-                 </div> 
-    </div>
-                </body>
+                 </body>
       
   <!-- tde Modal -->
   <div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -262,10 +253,24 @@ function change_JoiningDate() {
                  </div> 
               </div>
        </div>
+       
        <!-- /.modal  End -->    
     
           
+       <script>
+        //script for joining date
+function change_JoiningDate() {
+  document.getElementById("tenantJoiningDate").readOnly = false;
+}
+</script>
 
+
+       <script>
+        // script for selecting building name
+ document.getElementById("building").innerHTML=
+     localStorage.getItem("selected_building1");
+     //var buidling_name =  localStorage.getItem("selected_building1");
+ </script>
              
 
 <!--disable previous dates in Input date type -->

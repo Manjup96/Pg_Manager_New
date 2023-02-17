@@ -124,7 +124,7 @@ fetch('https://iqbetspro.com/pg-management/pg-manager-login-API.php', {
                 window.location = `dashboard.php`;  
             } 
         });
-        alert("OK");
+        // alert("OK");
 
         // dataString = 'username1='+ username1 ;
         //    $.ajax({

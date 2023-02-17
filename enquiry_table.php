@@ -183,7 +183,7 @@ textarea{
             <div class="row">
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
-                    <div style="margin-left:50px;width:1020px">
+                    <div style="margin-left:30px;width:1020px">
                     <center><div class="p-3 mb-2 bg text-black">Enquiry Details</div></center> 
   
                     <div class="search-container">

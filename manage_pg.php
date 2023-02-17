@@ -100,16 +100,17 @@ h1 {
              <div class="row">
                  <div class="col-md-12 lead">
                      <div class="mt-2 mb-6 clearfix">
-                     <div style="margin-left:50px;width:1600px">
+                     <div style="margin-left:0px;width:1600px">
                      <center><div class="p-3 mb-2  mr-5 bg text-black" style ="font-size:30px">Manage details</div></center>
                    
                      
 
  </div>
- </div>
+ 
  </br> 
- <div style="margin-left:50px" id="show_table">
+ <div style="margin-left:0px" id="show_table">
     <table id="create" border="1"></table>
+  </div>
   </div>
 </body>
   <script>
