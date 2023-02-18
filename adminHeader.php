@@ -12,7 +12,6 @@ h2 {text-align: center;}
 </style>     
 </head>
  <!-- nav -->
- 
 <nav  class="navbar navbar-expand-lg navbar-light px-5" style="background-color:white;">
 <div style="margin-left:150px">
     <a class="navbar-brand ml-5" href="./index.php" >

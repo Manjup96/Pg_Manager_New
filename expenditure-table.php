@@ -29,17 +29,11 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-          
-        ?>
-
+      
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: 5px;
   border-radius:10px;
@@ -47,14 +41,16 @@ p.two {
 
 h1 {
   color: dark;
-}
-.wrapper{
+} */
+/* .wrapper{
             width: 800px;
             margin: 0 auto;
         }
         table tr td:last-child{
-            width: 100px;
-        } .btn {
+            width: 100px; */
+        /* }  */
+        
+        .btn {
   background-color:  dark;
   border: none;
   color: white;
@@ -69,7 +65,7 @@ h1 {
   background-color: #DC7633;
 } */
 
-.form-group div
+/* .form-group div
     {
       color: red;
       size: 80%
@@ -77,16 +73,18 @@ h1 {
     .hidden
     {
       display:none;
-    }
+    } */
 
 </style>
 		
-    <body>
-    
-<?php
+<body class="smokewhite_bg_color">
 
-// echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
+<?php
+     include "./adminHeader.php";
+     include "./sidebar.php";
+     include "./commonlinks.php";
+     ?>
+    
 
 <div id="show_edit_form">
 <div class="container h-80">
@@ -217,8 +215,8 @@ h1 {
              <td>${r.Expenditure}</td>	
              <td> <div style=" display: flex;justify-content: space-around;">
           
-            <button style="border-width:5px;border-color:white" class="btn btn-dark">View</button>         
-    
+            <button style="border-width:5px;border-color:white" class="btn btn-sm btn-dark">View</button>         
+           
             </div>
             </td>
                  </tr>`;

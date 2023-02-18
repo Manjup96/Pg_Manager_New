@@ -63,15 +63,15 @@
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: medium;
   border-radius:20px;
-}
+} */
 
-h1 {
+/* h1 {
   color: #B9770E;
-}
+} */
 .btn {
   background-color: #117A65;
   border: none;
@@ -87,7 +87,7 @@ h1 {
     
     <script type="text/javascript" src="./assets/js/script.js"></script>
     <!-- <script type="text/javascript" src="./assets/js/roomFormData.js"></script> -->
-    <a href="account_table.php" >
+    <a href="account.php" >
        <div style="margin-left:910px">
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
     	<div class="container h-80 ">

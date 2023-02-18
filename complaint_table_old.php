@@ -39,7 +39,7 @@
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: 5px;
   border-radius:10px;
@@ -47,14 +47,14 @@ p.two {
 
 h1 {
   color: dark;
-}
-.wrapper{
+} */
+/* .wrapper{
             width: 800px;
             margin: 0 auto;
         }
         table tr td:last-child{
             width: 100px;
-        } 
+        }  */
     .btn {
   background-color: dark;
   border: none;
@@ -70,7 +70,7 @@ h1 {
   background-color: #DC7633;
 }  */
 
-.form-group div
+/* .form-group div
     {
       color: red;
       size: 80%
@@ -88,7 +88,7 @@ h1 {
     margin-bottom:10px;
     resize:none;
     font-size:16px;
-  }
+  } */
 
 </style>
 		<script type="text/javascript" src="./assets/js/script.js"></script>

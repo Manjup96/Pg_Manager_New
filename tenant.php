@@ -39,15 +39,16 @@
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: medium;
   border-radius:20px;
-}
+} */
 
-h1 {
+/* h1 {
   color: dark;;
-} .btn {
+} */
+ .btn {
   background-color: DodgerBlue;
   border: none;
   color: black;
@@ -57,7 +58,7 @@ h1 {
   font-size: 20px;
 }
 
-.form-group div
+/* .form-group div
     {
       color: red;
       size: 80%
@@ -81,7 +82,7 @@ textarea{
     margin-bottom:10px;
     resize:none;
     font-size:16px;
-  }
+  } */
 </style>
 
 <body>

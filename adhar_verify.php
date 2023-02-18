@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
     <head>
-       <body style="background-color:#D6DBDF;">
+
        <title>Admin</title>
         <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -28,15 +28,17 @@
 
 
     
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-                           
-        ?>
     </head>
-    <body class="h-90">
+
+   
         <script type="text/javascript" src="./assets/js/script.js"></script>
+        <body class="smokewhite_bg_color">
+
+<?php
+     include "./adminHeader.php";
+     include "./sidebar.php";
+     include "./commonlinks.php";
+     ?>
     	
         <div class="wrapper" style="margin-left:50px">
            <div class="container-fluid">
@@ -45,7 +47,7 @@
                     <div class="mt-2 mb-6 clearfix">
                        <div style="margin-left:50px">
                           <center>
-                                 <div class="p-3 mb-2 bg-dark text-white">Adhar API</div>
+                                 <div class="p-3 mb-2 bg text-black">Adhar API</div>
                           </center>
                           <br>
                        </div>  
@@ -55,7 +57,7 @@
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
             <center>
-                <input type="button"  class="btn btn-success" onclick="creds()" id="btn" value="Verify Aadhar number" />
+                <input type="button"  class="btn btn-dark" onclick="creds()" id="btn" value="Verify Aadhar number" />
                   <div class="url1">
                      <p id="showUrl"></p>
                   </div>

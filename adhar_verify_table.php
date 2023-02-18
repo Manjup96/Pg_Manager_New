@@ -29,17 +29,12 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-          
-        ?>
+      
 
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: 5px;
   border-radius:10px;
@@ -47,14 +42,16 @@ p.two {
 
 h1 {
   color: #154360;
-}
-.wrapper{
+} */
+/* .wrapper{
             width: 800px;
             margin: 0 auto;
-        }
-        table tr td:last-child{
+        } */
+        /* table tr td:last-child{
             width: 100px;
-        } .btn {
+        }  */
+        
+.btn {
   background-color:  #117A65;
   border: none;
   color: white;
@@ -64,12 +61,12 @@ h1 {
   font-size: 20px;
 }
 
-/* Darker background on mouse-over */
+/* Darker background on mouse-over
 .btn:hover {
   background-color: #DC7633;
-}
+} */
 
-.form-group div
+/* .form-group div
     {
       color: red;
       size: 80%
@@ -77,16 +74,17 @@ h1 {
     .hidden
     {
       display:none;
-    }
+    } */
 
 </style>
 		
-    <body>
-    
-<?php
+<body class="smokewhite_bg_color">
 
-// echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
+<?php
+     include "./adminHeader.php";
+     include "./sidebar.php";
+     include "./commonlinks.php";
+     ?>
 
 <div id="show_edit_form">
 <div class="container h-80 ">

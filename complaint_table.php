@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ececec;">
+<!-- <body style="background-color:#ececec;"> -->
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -28,12 +28,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-          
-        ?>
+      
 
 
 </head>
@@ -81,11 +76,13 @@ h1 {
 
 </style>
 
-    <body>
-       <?php
+    <body class="smokewhite_bg_color">
+    <?php
+       include "./adminHeader.php";
+       include "./sidebar.php";
+       include "./commonlinks.php";
+       ?>
 
-// echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
         
  <div class="form_group mt-5 text-center">
  

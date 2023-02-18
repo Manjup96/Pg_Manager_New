@@ -2,7 +2,7 @@
 
 <html>
   <head>
-  <body style="background-color:#D6DBDF;">
+  <!-- <body style="background-color:#D6DBDF;"> -->
         <title>Admin</title>
        	<!-- Required meta tags -->
          <meta charset="utf-8">
@@ -27,13 +27,13 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-        <?php
+        
+<?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
            
         ?>
-
 
 </head>
   <style>
@@ -181,7 +181,8 @@
     }
 }
   </style>
-  <body class="h-100">
+  <body >
+  
     <!-- <a href="manage pg.html">  -->
     <div class="container ">
       <h1 class="form-title" id="Create PG">Create PG</h1> 
@@ -202,14 +203,59 @@
                     name="landmark"
                     placeholder="Landmark"/>
           </div>
-          
+
           <div class="user-input-box">
+          <label for="state">State</label>
+
+          <select id="state" name="state">
+          <option value="AN">Select state</option>
+    <option value="AN">Andaman and Nicobar Islands</option>
+    <option value="AP">Andhra Pradesh</option>
+    <option value="AR">Arunachal Pradesh</option>
+    <option value="AS">Assam</option>
+    <option value="BR">Bihar</option>
+    <option value="CH">Chandigarh</option>
+    <option value="CT">Chhattisgarh</option>
+    <option value="DN">Dadra and Nagar Haveli</option>
+    <option value="DD">Daman and Diu</option>
+    <option value="DL">Delhi</option>
+    <option value="GA">Goa</option>
+    <option value="GJ">Gujarat</option>
+    <option value="HR">Haryana</option>
+    <option value="HP">Himachal Pradesh</option>
+    <option value="JK">Jammu and Kashmir</option>
+    <option value="JH">Jharkhand</option>
+    <option value="KA">Karnataka</option>
+    <option value="KL">Kerala</option>
+    <option value="LA">Ladakh</option>
+    <option value="LD">Lakshadweep</option>
+    <option value="MP">Madhya Pradesh</option>
+    <option value="MH">Maharashtra</option>
+    <option value="MN">Manipur</option>
+    <option value="ML">Meghalaya</option>
+    <option value="MZ">Mizoram</option>
+    <option value="NL">Nagaland</option>
+    <option value="OR">Odisha</option>
+    <option value="PY">Puducherry</option>
+    <option value="PB">Punjab</option>
+    <option value="RJ">Rajasthan</option>
+    <option value="SK">Sikkim</option>
+    <option value="TN">Tamil Nadu</option>
+    <option value="TG">Telangana</option>
+    <option value="TR">Tripura</option>
+    <option value="UP">Uttar Pradesh</option>
+    <option value="UT">Uttarakhand</option>
+    <option value="WB">West Bengal</option>
+</select>
+</div>
+          
+          <!-- <div class="user-input-box">
             <label for="state">State</label>
               <input type="text"
                     id="state"
                     name="state"
                     placeholder="State"/> 
-          </div>
+          </div> -->
           <div class="user-input-box">
             <label for="City">City</label>
               <input type="text"
@@ -326,7 +372,36 @@
      });
      </script>
       
-    
+      <script>
+       // creating states name drop-down
+    let text_box = '<input type="text" class="input-text" id="state">';
+    // let state_code_id = document.getElementById("state-code");
+
+    function create_states_dropdown() {
+        // get selected country code
+        // let country_code = document.getElementById("country").value;
+        // let states = states_list[country_code];
+        // invalid country code or no states add textbox
+        if(!states){
+            state_code_id.innerHTML = text_box;
+            return;
+        }
+        let option = '';
+        if (states.length > 0) {
+            option = '<select id="state">\n';
+            for (let i = 0; i < states.length; i++) {
+                option += '<option value="'+states[i].code+'">'+states[i].name+'</option>';
+            }
+            option += '</select>';
+        } else {
+            // create input textbox if no states 
+            option = text_box
+        }
+        state_code_id.innerHTML = option;
+    }
+
+
+    </script>
   </body>
 </html>
      

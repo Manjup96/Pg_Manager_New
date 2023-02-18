@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ececec;">
 <title>tenant form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -30,29 +29,25 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <!--<script type="text/javascript" src="./assets/js/tenant/tenantFormValidation.js"></script> -->        
-       <?php
-       include "./adminHeader.php";
-       include "./sidebar.php";
-       include "./commonlinks.php";
-       ?>
+      
 <style>
 
-p.two {
+/* p.two {
   border-style: solid;
   border-width: 5px;
   border-radius:10px;
-}
+} */
 
-h1 {
+/* h1 {
   color: dark;
-}
-.wrapper{
+} */
+/* .wrapper{
             width: 800px;
             margin: 0 auto;
-        }
-        table tr td:last-child{
+        } */
+        /* table tr td:last-child{
             width: 100px;
-        } 
+        }  */
   .btn {
   background-color:  dark;
   border: none;
@@ -68,7 +63,7 @@ h1 {
   background-color: #DC7633;
 } */
 
-.form-group div
+/* .form-group div
     {
       color: red;
       size: 80%
@@ -92,7 +87,7 @@ textarea{
     margin-bottom:10px;
     resize:none;
     font-size:16px;
-  }
+  } */
 </style>
 
 
@@ -114,7 +109,13 @@ textarea{
   <!-- open nav and close nav realated js is script.js -->
   <script type="text/javascript" src="./assets/js/script.js"></script>
 
-  <body>
+  <body class="smokewhite_bg_color">
+
+  <?php
+       include "./adminHeader.php";
+       include "./sidebar.php";
+       include "./commonlinks.php";
+       ?>
  
  <div class="form_group mt-5 text-center">
  
@@ -227,7 +228,7 @@ textarea{
                      </div>
                    </div>
                  </div>
-                 </body>
+                
       
   <!-- tde Modal -->
   <div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">

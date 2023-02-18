@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-   <body style="background-color:#ececec;"> 
+   <!-- <body style="background-color:#ececec;">  -->
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -32,17 +32,9 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-          
-        ?>
-
-
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: 5px;
   border-radius:10px;
@@ -57,7 +49,7 @@ h1 {
         }
         table tr td:last-child{
             width: 100px;
-        } 
+        }  */
         
   .btn {
   background-color:  dark;
@@ -74,7 +66,7 @@ h1 {
   background-color: #DC7633;
 } */
 
-.form-group div
+/* .form-group div
     {
       color: red;
       size: 80%
@@ -92,17 +84,17 @@ h1 {
     margin-bottom:10px;
     resize:none;
     font-size:16px;
-  }
+  } */
 
 </style>
 		
-    <body>
+    <body class="smokewhite_bg_color">
     
-<?php
-
-// echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
-
+    <?php
+       include "./adminHeader.php";
+       include "./sidebar.php";
+       include "./commonlinks.php";
+       ?>
 <div class="form_group mt-5 text-center" >
  
  The Selected buiding id : <b> <span id="building"></span></b>

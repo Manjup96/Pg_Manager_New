@@ -38,7 +38,7 @@
 <!--   </select> -->
 
 <!-- </div>-->
-<div id="main">
+<div id="main" class="smokewhite_bg_color">
 <div class="w3-teal">
     <button class="openbtn" style="background-color:#363636" onclick="openNav()"><i class="fa fa-home"></i></button>
     <div class="w3-container">
@@ -85,7 +85,7 @@ else
 }
 
 
-echo "<h5 style='color:black; margin-left:30vw'>"."Hello " . $manager_name . ".<h5><br>";
+echo "<h5 style='color:black; margin-left:30vw'>"."Hello " . $manager_name . ".</h5><br>";
 
 // echo "<h5 style='color:black; margin-left:30vw'>"."mail " . $e . ".<h5><br>";
 // echo "<h5 style='color:black; margin-left:30vw'>"."mail " . $m . ".<h5><br>";

@@ -27,18 +27,13 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-        <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-            include "./commonlinks.php";
-           
-        ?>
+  
 
 
 </head>
 <style>
      .btn {
-  background-color:#3c3f3f;
+  background-color:red;
   border: box;
   color: white;
   padding: 12px 16px;
@@ -62,8 +57,15 @@ h1 {
 }
 
 </style>
-
-    <body>
+	
+<body class="smokewhite_bg_color">
+    
+    <?php
+       include "./adminHeader.php";
+       include "./sidebar.php";
+       include "./commonlinks.php";
+       ?>
+       <!-- <body> -->
    <div class="container h-90 pt-5" style="margin-right:900px ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-10" style="  border-style: solid;border-width: 3px;border-radius: 20px;
@@ -77,12 +79,12 @@ h1 {
                     <center>
                         <!--<a href="room_setup.php"  class="btn"><i class="fa fa-home"></i> Rooms</a> -->
                        
-                        <a href="manage_pg.php"  class="btn mb-2"><i class="fa fa-home"></i>Manage PG's </a>
+                        <a href="manage_pg.php"  class="btn btn-dark mb-2"><i class="fa fa-home"></i>Manage PG's </a>
                
-                        <a href="configure.php"  class="btn mb-2"><i class="fa fa-home"></i>Configure PG's </a>
+                        <a href="configure.php"  class="btn btn-dark mb-2"><i class="fa fa-home"></i>Configure PG's </a>
                         <!-- <a href="configure_table.php"  class="btn mb-2"><i class="fa fa-home"></i>Configure details  </a> -->
                     
-                        <a href="manage_rooms.php"  class="btn mb-2"><i class="fa fa-home"></i>Manage rooms/beds</a>
+                        <a href="manage_rooms.php"  class="btn btn-dark mb-2"><i class="fa fa-home"></i>Manage rooms/beds</a>
                     </center>
 
                 	</form>

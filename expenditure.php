@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+<!-- <body style="background-color:#D6DBDF;"> -->
   <title>Admin</title>
   <!-- Required meta tags -->
   
@@ -53,25 +53,19 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-            include_once "./config/dbconnect.php";
-        ?>
-
+      
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: medium;
   border-radius:20px;
-}
+} */
 
-h1 {
+/* h1 {
   color: #B9770E;
-}
+} */
 .btn {
   background-color: #117A65;
   border: none;
@@ -82,11 +76,17 @@ h1 {
   font-size: 20px;
 }
 </style>
-		
-<body class="h-100">
+<body class="smokewhite_bg_color">
+<?php
+            include "./adminHeader.php";
+            include "./sidebar.php";
+            include "./commonlinks.php";
+            include_once "./config/dbconnect.php";
+        ?>
+
    
    <script type="text/javascript" src="./assets/js/script.js"></script>
-   <a href="account_table.php"  > <div style="margin-left:910px">
+   <a href="account.php"  > <div style="margin-left:910px">
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
      <div class="container h-90">
            <div class="row h-90 justify-content-center align-items-center">

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<!-- <body style="background-color:#D6DBDF;"> -->
+
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -37,15 +37,15 @@
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: medium;
   border-radius:20px;
-}
-
+} */
+/* 
 h1 {
   color: red;
-}
+} */
 .wrapper{
             width: 800px;
             margin: 0 auto;

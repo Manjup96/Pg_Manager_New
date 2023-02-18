@@ -39,7 +39,7 @@
 
 </head>
 <style>
-p.two {
+/* p.two {
   border-style: solid;
   border-width: 5px;
   border-radius:10px;
@@ -48,13 +48,14 @@ p.two {
 h1 {
   color: dark;
 }
-.wrapper{
+/* .wrapper{
             width: 800px;
             margin: 0 auto;
         }
         table tr td:last-child{
             width: 100px;
-        } .btn {
+        }  */
+        .btn {
   background-color:  dark;
   border: none;
   color: white;
@@ -68,7 +69,7 @@ h1 {
 /* .btn:hover {
   background-color: #DC7633;
 } */
-
+/* 
 .form-group div
     {
       color: red;
@@ -88,7 +89,7 @@ h1 {
     margin-bottom:10px;
     resize:none;
     font-size:16px;
-  }
+  } */
 </style>
 		
     <body>
@@ -133,7 +134,7 @@ h1 {
                 		</div>
                         
 						<center>
-              <button type="submit" class="btn btn-success btn-customized">Save
+              <button type="submit" class="btn btn-dark btn-customized">Save
 
               </button>
                              </center>

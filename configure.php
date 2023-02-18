@@ -2,8 +2,8 @@
 
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ececec;">
-<title>Building form</title>
+<!-- <body style="background-color:#ececec;"> -->
+<title></title>
 			<!-- Required meta tags -->
       <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,12 +27,7 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-        <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-            include "./commonlinks.php";
-           
-        ?>
+       
 
 
 </head>
@@ -104,7 +99,12 @@ form.example::after {
 </style>
 
 
-
+<?php
+            include "./adminHeader.php";
+            include "./sidebar.php";
+            include "./commonlinks.php";
+           
+        ?>
  
     <body class="h-100">
         

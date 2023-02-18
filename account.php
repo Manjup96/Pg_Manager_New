@@ -24,13 +24,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
-        <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-            include_once "./config/dbconnect.php";
-        ?>
-
+       
 </head>
 <style>
 .btn {
@@ -47,7 +41,7 @@
 /* .btn:hover {
   background-color: #ABEBC6;
 } */
-p.two {
+/* p.two {
   border-style: solid;
   border-width: medium;
   border-radius:22px;
@@ -55,13 +49,19 @@ p.two {
 
 h1 {
   color: dark;
-}
+} */
 
 </style>
 
-    <body>
+<body class="smokewhite_bg_color">
    
     
+    <?php
+            include "./adminHeader.php";
+            include "./sidebar.php";
+           
+            include_once "./config/dbconnect.php";
+        ?>
     	<div class="container h-90 pt-5" style="margin-right:900px ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-10" style="  border-style: solid;border-width: 3px;border-radius: 20px;
