@@ -5,7 +5,7 @@
 <div class="sidebar" id="mySidebar">
 <div class="side-header">
     <img src="./assets/images/logo.png" width="120" height="120" alt="Swiss Collection"> 
-    <h5 style="margin-top:10px;color:white">Hi <?php echo $_SESSION['username'] ;?></h5>
+    <h5 style="margin-top:10px;color:black">Hi <?php echo $_SESSION['username'] ;?></h5>
 </div>
 
 <hr style="border:1px solid; background-color:#FADBD8; border-color:#FADBD8;">

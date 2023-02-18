@@ -6,8 +6,11 @@
 ?>
 <head>
 <style>
-h2 {text-align: center;}
-
+h2 {
+   text-align: center;
+   color:black;
+}
+ 
 
 </style>     
 </head>
@@ -18,7 +21,7 @@ h2 {text-align: center;}
        <img src="./assets/images/logo.png" width="80" height="80" alt="Swiss Collection">
     </a>
 </div>
-     <h2 style="color:Black"> PG Manager</h2>
+     <h2> PG Manager</h2>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0"></ul>
    
     <div class="topbar-divider d-none d-sm-block"></div>
