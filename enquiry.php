@@ -105,8 +105,17 @@ textarea{
     <script type="text/javascript" src="./assets/js/script.js"></script>
     <script type="text/javascript" src="./assets/js/enquiryFormData.js"></script>
     <script type="text/javascript" src="./assets/js/enquiry.js"></script>
- <a href="enquiry_table.php"  > <div style="margin-left:910px">
+    
+    <div class="container h-80 ">
+            <div class="row h-90 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+    <a href="enquiry_table.php"> <div style="margin-left:250px">
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+</div>
+</div>
+</div>
+ <!-- <a href="enquiry_table.php"  > <div style="margin-left:1000px">
+<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a> -->
     	<div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;

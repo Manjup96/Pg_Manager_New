@@ -95,10 +95,16 @@ textarea{
  </div>
 
     <!-- <body class="h-100"> -->
-    <a href="tenant_table.php"  > <div style="margin-left:910px">
-<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>    
-    	<div class="container h-90">
-        
+ 
+    <div class="container h-80 ">
+            <div class="row h-90 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+    <a href="tenant_table.php"> <div style="margin-left:250px">
+<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+</div>
+</div>
+</div>
+            <div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;border-radius: 20px;
                  padding: 20px;box-shadow: 5px 10px #76D7C4;">
@@ -180,7 +186,6 @@ textarea{
                 </div>
             </div>
         </div>
-        </body>
         <script type="text/javascript" src="./assets/js/script.js"></script>
         <!-- <script type="text/javascript" src="./assets/js/tenantFormValidation.js"></script> -->
         <script type="text/javascript" src="./assets/js/tenantRegistration.js"></script>

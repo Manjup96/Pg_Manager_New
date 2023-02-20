@@ -490,7 +490,7 @@ function show_selectedBuilding(){
    
     <!-- Barchat CSS -->
      <style>
-     
+      
      * {
         margin: 0;
         padding: 0;
@@ -524,7 +524,7 @@ function show_selectedBuilding(){
         
       }
 
-    </style>
+    </style> 
 
  <script>
   var manager_mail = document.getElementById("manager_email").value;

@@ -97,8 +97,14 @@
  </script>
 
  </div>
-    <a href="news_table.php"  > <div style="margin-left:910px">
+ <div class="container h-80 ">
+            <div class="row h-90 justify-content-center align-items-center">
+            <div class="col-10 col-md-8 col-lg-6">
+    <a href="news_table.php"> <div style="margin-left:250px">
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+</div>
+</div>
+</div>
     	<div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
@@ -120,7 +126,7 @@
                           <div class="form-group">
                             <label for="newsDescription">News Description</label>
                                   <textarea id="newsDescription" name="newsDescription" placeholder=""rows="3" cols="40" style="height:150px" style="width:150px"></textarea></div>
-                               </br>
+                               
 
                           
 						<center><button type="submit" class="btn btn-dark btn-customized">Save</button>

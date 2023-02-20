@@ -18,7 +18,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+<!-- <body style="background-color:#D6DBDF;"> -->
   <title>Admin</title>
   <!-- Required meta tags -->
   
@@ -53,13 +53,7 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-            include_once "./config/dbconnect.php";
-        ?>
-
+      
 
 </head>
 <style>
@@ -83,13 +77,26 @@
 }
 </style>
 		
-    <body class="h-100">
+    <body class="smokewhite_bg_color">
+    <?php
+            include "./adminHeader.php";
+            include "./sidebar.php";
+           
+            include_once "./config/dbconnect.php";
+        ?>
+
     
     <script type="text/javascript" src="./assets/js/script.js"></script>
     <!-- <script type="text/javascript" src="./assets/js/roomFormData.js"></script> -->
-    <a href="account.php" >
-       <div style="margin-left:910px">
+ 
+    <div class="container h-80 ">
+        <div class="row h-90 justify-content-center align-items-center">
+                <div class="col-10 col-md-8 col-lg-6">
+                <a href="account.php"  > <div style="margin-left:250px">
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+                </div>  
+                </div>
+                </div>
     	<div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
@@ -148,7 +155,7 @@
             
 					
 <center>
-              <button type="submit" class="btn btn-success btn-customized" >Save</button>
+              <button type="submit" class="btn btn-dark btn-customized" >Save</button>
                              </center>
 						
                 	</form>

@@ -99,6 +99,7 @@ echo '<input type="hidden" id="manager_mobile" value="'.$manager_mobile.'">';
 
 <!--dropdown btn -->
 <script src="js/jquery-latest.min.js"></script>
+<script type="text/javascript" src="./assets/js/script.js"></script>
 <script>
 //   var manager_mail = document.getElementById("manager_email").value;
 //   console.log(manager_mail);
