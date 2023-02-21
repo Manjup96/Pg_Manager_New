@@ -1,8 +1,8 @@
 
-
+<!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-
+<!-- <body style="background-color:#ececec;"> -->
 <title>Building form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -27,32 +27,53 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-       
+  
 
 
 </head>
+<style>
+     .btn {
+  background-color:red;
+  border: box;
+  color: white;
+  padding: 12px 16px;
+  padding:0rem 1rem 1rem 1rem;
+  font-size: 22px;
+  cursor: pointer;
+}
 
+/* Darker background on mouse-over */
+/* .btn:hover {
+  background-color: #ABEBC6;
+} */
+p.two {
+  border-style: solid;
+  border-width: medium;
+  border-radius:22px;
+}
 
-   
+h1 {
+  color: #2f2f2f;
+}
+
+</style>
+	
 <body class="smokewhite_bg_color">
-   
     
-   <?php
-           include "./adminHeader.php";
-           include "./sidebar.php";
-           include "./commonlinks.php";
-           // include_once "./config/dbconnect.php";
+    <?php
+       include "./adminHeader.php";
+       include "./sidebar.php";
+       include "./commonlinks.php";
        ?>
-   
-    
-    	<div class="container h-90 pt-5 " style="margin-right:900px ">
-            <div class="row h-90 justify-content-center align-items-center ">
-                <div class="col-10 col-md-8 col-lg-10 bg " style="  border-style: solid;border-width: 3px;border-radius: 20px;
+       <!-- <body> -->
+   <div class="container h-90 pt-5" style="margin-right:900px ">
+            <div class="row h-90 justify-content-center align-items-center">
+                <div class="col-10 col-md-8 col-lg-10" style="  border-style: solid;border-width: 3px;border-radius: 20px;
                  padding: 10px;box-shadow: 5px 10px #76D7C4;">
 					<!-- Form -->
                     
                 	<form class="form-example" action=".php" method="post">
-                     <h1><center><div class="p-3 mb-2  text-black"><p class="two">Resource Details</p></div></center></h1>
+                     <h1><center><div class="p-3 mb-2 bg- text-black"><p class="two">Resource Details</p></div></center></h1>
                 		
 
                     <center>
@@ -60,10 +81,10 @@
                        
                         <a href="manage_pg.php"  class="btn btn-dark mb-2"><i class="fa fa-home"></i>Manage PG's </a>
                
-                        <!--<a href="configure.php"  class="btn mb-2"><i class="fa fa-home"></i>Configure PG's </a>-->
+                        <a href="configure.php"  class="btn btn-dark mb-2"><i class="fa fa-home"></i>Configure PG's </a>
                         <!-- <a href="configure_table.php"  class="btn mb-2"><i class="fa fa-home"></i>Configure details  </a> -->
                     
-                        <!--<a href="manage_rooms.php"  class="btn mb-2"><i class="fa fa-home"></i>Manage rooms/beds</a>-->
+                        <a href="manage_rooms.php"  class="btn btn-dark mb-2"><i class="fa fa-home"></i>Manage rooms/beds</a>
                     </center>
 
                 	</form>

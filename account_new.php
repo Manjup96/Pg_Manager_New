@@ -56,26 +56,6 @@
       
 
 </head>
-<style>
-/* p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:20px;
-} */
-
-/* h1 {
-  color: #B9770E;
-} */
-.btn {
-  background-color: #117A65;
-  border: none;
-  color: black;
-  padding: 10px 25px;
-  padding:0rem 1rem 1rem 1rem;
-  cursor: pointer;
-  font-size: 20px;
-}
-</style>
 		
     <body class="smokewhite_bg_color">
     <?php

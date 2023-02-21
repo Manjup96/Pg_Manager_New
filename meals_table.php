@@ -34,23 +34,7 @@
 
 </head>
 <style>
-/* p.two {
-  border-style: solid;
-  border-width: 5px;
-  border-radius:10px;
-}
-
-h1 {
-  color: dark;
-}
-.wrapper{
-            width: 800px;
-            margin: 0 auto;
-        }
-        table tr td:last-child{
-            width: 100px;
-        }  */
-        
+/* 
   .btn {
   background-color:  dark;
   border: none;
@@ -59,32 +43,8 @@ h1 {
   padding:0rem 1rem 1rem 1rem;
   cursor: pointer;
   font-size: 20px;
-}
-
-/* Darker background on mouse-over */
-/* .btn:hover {
-  background-color: #DC7633;
 } */
 
-/* .form-group div
-    {
-      color: red;
-      size: 80%
-    }
-    .hidden
-    {
-      display:none;
-    }
-    textarea{
-    width:100%;
-    padding:15px;
-    margin-top:5px;
-    border:1px solid #7ac9b7;
-    border-radius:5px;
-    margin-bottom:10px;
-    resize:none;
-    font-size:16px;
-  } */
 
 </style>
 		
@@ -168,14 +128,14 @@ h1 {
             <div class="row">
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
-                    <div style="margin-left:50px;width:720px">
+                    <div style="margin-left:50px;width:950px">
                     <center><div class="p-3 mb-2 bg text-black">Meals details</div></center>
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
                      <button type="submit"><i class="fa fa-search"></i></button>
-                      <!--  <a href="meals.php" class="btn btn-success pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add meals</a>  -->
-                        <button type="submit" class="btn btn-success " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
+                      <!--  <a href="meals.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add meals</a>  -->
+                        <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
 
 </div>
 </div>
@@ -398,7 +358,7 @@ const url ="https://iqbetspro.com/pg-management/GET-Meals-API.php";
                 <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-dark" onclick="viewMealsDetails()">view</button> -->
                <!-- <button type="button" class="btn btn-dark" onclick="updateDetails()">update</button> -->  
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>   
+                <button type="button" class="btn btn-darkr" data-dismiss="modal">Close</button>   
                 
                 <input type="hidden" id="hiddendata">
                 </div>

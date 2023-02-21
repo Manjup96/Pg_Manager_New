@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    
+  <!-- <body style="background-color:#D6DBDF;"> -->
         <title>Admin</title>
        	<!-- Required meta tags -->
          <meta charset="utf-8">
@@ -27,16 +27,15 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-        <?php
+        
+<?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
            
         ?>
 
-
 </head>
-<style>
   <style>
     *{
     padding: 0;
@@ -182,9 +181,8 @@
     }
 }
   </style>
-</style>
-
-  <body class="h-100">
+  <body >
+  
     <!-- <a href="manage pg.html">  -->
     <div class="container ">
       <h1 class="form-title" id="Create PG">Create PG</h1> 
@@ -205,6 +203,7 @@
                     name="landmark"
                     placeholder="Landmark"/>
           </div>
+
           <div class="user-input-box">
           <label for="state">State</label>
 
@@ -296,7 +295,7 @@
         </div>  -->
    <div>
         <!-- <center><button type="submit" name="submit">Submit</button></center>  -->
-       <button type="submit" class="btn btn-dark btn-customized" id="save_pg" >Save</button>
+       <button type="submit" class="btn btn-success btn-customized" id="save_pg" >Save</button>
     </div>
   </div>
       </form>
@@ -365,7 +364,7 @@
          else
          {
               alert("PG Details Saved Successfully");
-         window.location = "manage_pg.php"
+         window.location = "configure.php"
          
          }
      

@@ -32,49 +32,7 @@
 
 
 </head>
-<style>
-p.two {
-  border-style: solid;
-  border-width: 5px;
-  border-radius:10px;
-}
 
-h1 {
-  color: #154360;
-}
-.wrapper{
-            width: 800px;
-            margin: 0 auto;
-        }
-        table tr td:last-child{
-            width: 100px;
-        } 
-    .btn {
-  background-color:  #117A65;
-  border: none;
-  color: white;
-  padding: 13px 25px;
-  padding:0rem 1rem 1rem 1rem;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: #DC7633;
-}
-
-.form-group div
-    {
-      color: red;
-      size: 80%
-    }
-    .hidden
-    {
-      display:none;
-    }
-
-</style>
 
     <body class="smokewhite_bg_color">
     <?php
@@ -103,14 +61,14 @@ h1 {
             <div class="row">
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
-                    <div style="margin-left:50px;width:750px">
+                    <div style="margin-left:50px;width:1000px">
                     <center><div class="p-3 mb-2 bg text-black" >Complaints details</div></center>
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
                      <button type="submit"><i class="fa fa-search"></i></button>
-                        <!--<a href="complaints.php" class="btn btn-success pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add complaints</a> -->
-                        <button type="submit" class="btn btn-success " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
+                        <!--<a href="complaints.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add complaints</a> -->
+                        <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
 
 </div>
 </div>
@@ -123,7 +81,7 @@ h1 {
   <div class="form_group mt-5 text-center" >
     <div class="container h-80 ">
       <div class="row h-90 justify-content-center align-items-center">
-        <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-widtd: 3px;
+        <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
 				border-radius: 20px;
                  padding: 20px;box-shadow: 5px 10px #76D7C4;">
           <form id="response_form">
@@ -144,7 +102,7 @@ h1 {
             </div>
             
             <center>
-              <button type="submit" id="save_response" class="btn btn-success btn-customized">Save</button>
+              <button type="submit" id="save_response" class="btn btn-dark btn-customized">Save</button>
             </center>
 
           </form>
@@ -279,7 +237,7 @@ h1 {
                 <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-dark" onclick="viewDetails()">view</button> -->
                <!-- <button type="button" class="btn btn-dark" onclick="updateDetails()">update</button> -->  
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>   
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>   
                 
                 <input type="hidden" id="hiddendata">
                 </div>
@@ -414,7 +372,7 @@ function validateResponse(){
                   
                     <button style="border-width:5px;border-color:white" onclick="give_response(${r.id})">Response</button>   
                    
-              <button class="btn btn-primary" data-toggle="modal" onclick="viewDetails(${r.id})">View</button>
+              <button class="btn btn-dark" data-toggle="modal" onclick="viewDetails(${r.id})">View</button>
              </div>
              </td>
              

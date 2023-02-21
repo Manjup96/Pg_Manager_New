@@ -6,6 +6,12 @@
     font-size: 20px;
 }
 
+.required::after{
+  content:" *";
+  color: red;
+  font-size:20px;
+}
+
  p.two {
   border-style: solid;
   border-width: 5px;
@@ -22,11 +28,6 @@
       display:none;
     }
 
-    .required::after{
-  content:" *";
-  color: red;
-  font-size:20px;
-}
 
 h1{
   color:#393632;
@@ -376,12 +377,14 @@ padding: 30px 30px;
 }
 
 .btn {
+
 font-weight: 700;
 height: 36px;
 -moz-user-select: none;
 -webkit-user-select: none;
 user-select: none;
 cursor: default;
+
 }
 
 /*
@@ -539,3 +542,5 @@ border-radius: 5px;
   font-size:24px;
  }
  
+
+/* end*/

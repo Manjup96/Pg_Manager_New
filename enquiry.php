@@ -40,52 +40,7 @@
 
 
 </head>
-<style>
-/* p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:20px;
-}
 
-h1 {
-  color: dark;;
-}  */
-.btn {
-  background-color: DodgerBlue;
-  border: none;
-  color: black;
-  padding: 10px 25px;
-  padding:0rem 1rem 1rem 1rem;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/* .form-group div
-    {
-      color: red;
-      size: 80%
-    }
-    .hidden
-    {
-      display:none;
-    }
-
-    .required::after{
-  content:" *";
-  color: red;
-  font-size:20px;
-}
-textarea{
-    width:100%;
-    padding:15px;
-    margin-top:5px;
-    border:1px solid #7ac9b7;
-    border-radius:5px;
-    margin-bottom:10px;
-    resize:none;
-    font-size:16px;
-  } */
-</style>
 <body>
 		<div class="form_group mt-5 text-center">
  

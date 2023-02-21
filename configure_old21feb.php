@@ -1,14 +1,9 @@
-<?php
 
-$PG_Name=$_GET['PG_Name'];
-//  $manager_mobile=$_GET['manager_mobile'];
-//  $manager_email=$_GET['manager_email'];
-?>
 
 <html lang="en" class="h-90">
 <head>
-
-<title>Building form</title>
+<!-- <body style="background-color:#ececec;"> -->
+<title></title>
 			<!-- Required meta tags -->
       <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -36,15 +31,82 @@ $PG_Name=$_GET['PG_Name'];
 
 
 </head>
+<style>
+p.two {
+  border-style: solid;
+  border-width: medium;
+  border-radius:20px;
+}
 
- 
-<body class="smokewhite_bg_color">
-    <?php
+h1 {
+  color: #0f0f0e;
+}
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #EC7063 ;
+  color: black;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #EC7063 ;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.form-group div
+{
+  color: red;
+  size: 80%
+}
+.hidden
+{
+  display:none;
+}
+
+
+.required::after{
+  content:" *";
+  color: red;
+  font-size:20px;
+}
+</style>
+
+
+<?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
            
         ?>
+ 
+    <body class="h-100">
         
     
     <input type="text" id="PG_Name" value=" <?php echo $PG_Name  ?>" hidden>
@@ -89,8 +151,8 @@ $PG_Name=$_GET['PG_Name'];
                 <div class="pt-5">
                     <right>
                         <!-- <button type="submit" name="submit">Submit</button> -->
-                         <button type="submit" class="btn btn-dark" name="submit">Submit</button> 
-                         <button><a href="manage_pg.php"  class="btn btn-danger btn-customized">Back </a></button> 
+                         <button type="submit" name="submit">Submit</button> 
+                         <button><a href="manage_pg.php"  class="btn btn-success btn-customized">Back </a></button> 
                         <!-- <button type="Back" name="Back">Back</button> -->
                 </right>
                 </div>
@@ -199,15 +261,15 @@ $PG_Name=$_GET['PG_Name'];
        
         if(data[0].Message.response =='error')
         {
-              alert("Room Configure Data NOT Saved")
+              alert("Room Configure Data is Saved")
                 window.location = "configure_table.php"
             
         }
         
         else
         {
-           alert("Room Configure Data is Saved Successfully")
-        window.location = "configure_table.php"
+           alert("Room Configure Data NOT Saved")
+        window.location = "configure.php"
         }
     
     }).catch(error => console.error('Error:', error)); 

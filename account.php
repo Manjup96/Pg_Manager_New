@@ -27,7 +27,7 @@
 
        
 </head>
-<style>
+<!-- <style>
 .btn {
   background-color:dark;
   border: box;
@@ -38,21 +38,7 @@
   cursor: pointer;
 }
 
-/* Darker background on mouse-over */
-/* .btn:hover {
-  background-color: #ABEBC6;
-} */
-/* p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:22px;
-}
-
-h1 {
-  color: dark;
-} */
-
-</style>
+</style> -->
 
 <body class="smokewhite_bg_color">
    

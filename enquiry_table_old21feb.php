@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -29,23 +29,79 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-          
-        ?>
+       
 
 
 </head>
+<style>
+/* p.two {
+  border-style: solid;
+  border-width: 5px;
+  border-radius:10px;
+}
 
-		
-    <body class="h-0">
+h1 {
+  color: dark;
+}
+.wrapper{
+            width: 800px;
+            margin: 0 auto;
+        }
+        table tr td:last-child{
+            width: 100px;
+        }  */
+  .btn {
+  background-color:  dark;
+  border: none;
+  color: white;
+  padding: 13px 25px;
+  padding:0rem 1rem 1rem 1rem;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+/* .btn:hover {
+  background-color: #DC7633;
+} */
+
+/* .form-group div
+    {
+      color: red;
+      size: 80%
+    }
+    .hidden
+    {
+      display:none;
+    }
+
+    .required::after{
+  content:" *";
+  color: red;
+  font-size:20px;
+}
+textarea{
+    width:100%;
+    padding:15px;
+    margin-top:5px;
+    border:1px solid #7ac9b7;
+    border-radius:5px;
+    margin-bottom:10px;
+    resize:none;
+    font-size:16px;
+  } */
+  </style>
+		  <body class="smokewhite_bg_color">
     
-<?php
+    <?php
+            include "./adminHeader.php";
+            include "./sidebar.php";
+            include "./commonlinks.php";
+            include_once "./config/dbconnect.php";
+        ?>
 
-// echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
+    
+ 
 <div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
@@ -122,27 +178,39 @@
 
          
     <script type="text/javascript" src="./assets/js/script.js"></script>
-   <div class="wrapper" style="margin-right:700px" id="show_table">
+ <div class="wrapper" style="margin-right:800px" id="show_table">
         <div class="container-fluid" >
             <div class="row">
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
-                    <div style="margin-left:50px;width:1020px">
-                    <center><div class="p-3 mb-2 bg text-black">Enquiry Details</div></center>
-                    
+                    <div style="margin-left:30px;width:1020px">
+                    <center><div class="p-3 mb-2 bg text-black">Enquiry Details</div></center> 
+  
                     <div class="search-container">
-                     <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
-                     <button type="submit"><i class="fa fa-search" style="color:white";></i></button>
-                        <a href="enquiry.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Enquiry</a>
-                        <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
+                    <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
+                   <button type="submit"><i class="fa fa-search"></i></button>
+                        <a href="enquiry.php" class="btn btn-success pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Enquiry</a>
+                        <button type="submit" class="btn btn-success " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
+
 
                         </div>
+                        </div>
+
                 
              </br> 
 
-     <div style="margin-left:50px" id="show_table">
+     <div style="margin-left:30px" id="show_table">
       <table id="enquiry" border="1"></table>
   </div>
+
+  </div>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+                 </div> 
+    </div>
+                </body>
                     <script>
                       // to show pop up 
                       document.getElementById("show_edit_form").style.display="none";
@@ -152,60 +220,10 @@
   // form validation for update//
 
  
-document.getElementById("save_enq").disabled = true;
+document.getElementById("save_enq").disabled = false;
 var mobile_check=0,name_check=0,email_check=0;
 
 function initial_check(){
-      var mobile = document.getElementById("enquiryMobileNumber").value;
-    console.log("MobileNumber=",mobile);
-
-    var mobileRegEX =/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-
-    if(mobileRegEX.test(mobile))
-      {
-        
-        document.getElementById("mobile_error").style.display = "none";
-        mobile_check=1;
-
-      } else
-      { document.getElementById("mobile_error").style.display = "block";  
-      mobile_check=0;} 
-       var name = document.getElementById("enquiryUsername").value;
-  console.log("Name=",name);
-
-  var nameRegEx=  /^[a-zA-Z ]{2,30}$/;
-
-  if(nameRegEx.test(name))
-  {
-  // console.log("true");
-  document.getElementById("name_error").style.display="none";
-  name_check=1;
-  }
-  else
-  {document.getElementById("name_error").style.display="block"; 
-  name_check=0;
-    
-  }
-   var email = document.getElementById("enquiryEmail").value;
-  console.log("Email=",email);
-
-  var emailRegEx=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-  if(emailRegEx.test(email))
-  {
-  // console.log("true");
-  document.getElementById("email_error").style.display="none";
-  email_check=1;
-  }
-  else
-  {document.getElementById("email_error").style.display="block"; 
-  email_check=0;
-    
-  }
-  
-    
-    
-    
   if(email_check==1 &&  mobile_check==1 && name_check==1)
   { document.getElementById("save_enq").disabled = false;
   }
@@ -229,7 +247,14 @@ function validateMobileNumber(){
       { document.getElementById("mobile_error").style.display = "block";  
       mobile_check=0;} 
       
-   initial_check();
+    if(mobile_check==1)
+    // (email_check==1 &&  mobile_check==1 && name_check==1)
+    { document.getElementById("save_enq").disabled = false;
+    }
+    else{
+    document.getElementById("save_enq").disabled = true;
+
+    }
 }
 
 function validateName(){
@@ -252,7 +277,14 @@ function validateName(){
   }
   // console.log("Error");
 
-  initial_check();
+  if(name_check==1 )
+  // email_check==1 &&  mobile_check==1 && name_check==1
+  { document.getElementById("save_enq").disabled = false;
+  }
+  else{
+  document.getElementById("save_enq").disabled = true;
+
+  }
 }
 
 
@@ -276,15 +308,14 @@ function validateEmail(){
   }
   // console.log("Error");
 
-//   if(email_check==1)
-//   // email_check==1 &&  mobile_check==1 && name_check==1
-//   { document.getElementById("save_enq").disabled = false;
-//   }
-//   else{
-//   document.getElementById("save_enq").disabled = true;
+  if(email_check==1)
+  // email_check==1 &&  mobile_check==1 && name_check==1
+  { document.getElementById("save_enq").disabled = false;
+  }
+  else{
+  document.getElementById("save_enq").disabled = true;
 
-//   }
-initial_check();
+  }
 }
 
 function validateRemarks(){
@@ -295,7 +326,6 @@ function validateRemarks(){
   else{
         document.getElementById("remarks_error").style.display="block";
   }
-  initial_check();
 }
 function validateReference(){
   var reference = document.getElementById("enquiryReference").value;
@@ -305,7 +335,6 @@ function validateReference(){
   else{
         document.getElementById("reference_error").style.display="block";
   }
-  initial_check();
 }
 
 

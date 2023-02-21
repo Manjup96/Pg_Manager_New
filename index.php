@@ -58,7 +58,7 @@ h1 {
 							<label for="password">Password:</label>
 							<input type="password" class="form-control password" id="password" placeholder="Password..." name="password">
 						</div>
-						<center> <input type="submit" class="btn btn-dark"value="Login"/></center>
+						<center> <input type="submit" class="btn btn-dark "value="Login"/></center>
                 		<!-- End input fields -->
                 		
                 	</form>

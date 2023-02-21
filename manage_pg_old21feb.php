@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<!-- <body style="background-color:white;"> -->
+<body style="background-color:#ececec;">
   <title>Admin</title>
  	<!-- Required meta tags -->
      <meta charset="utf-8">
@@ -27,25 +27,67 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-      
-
-
-</head>
-<body class="smokewhite_bg_color">
 <?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
            
         ?>
+
+
+</head>
+<style>
+p.two {
+  border-style: solid;
+  border-width: medium;
+  border-radius:20px;
+}
+
+h1 {
+  color: red;
+ 
+}
+.wrapper{
+            width: 800px;
+            margin: 0 auto;
+        }
+        table tr td:last-child{
+            width: 100px;
+        }
+        .btn {
+  background-color: #404442;
+  border: none;
+  color: rgb(221, 216, 216);
+  padding: 10px 25px;
+  padding:0rem 1rem 0rem 1rem ;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left:10px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #DC7633;
+}
+
+.heading{
+    font-size: 50px;
+    font-family: "Roboto";
+    font-weight:bold;
+    color:black;
+}
+</style>
+
+<body>
+
  <div class="wrapper" style="margin-right:700px"> 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <div class="mt-2 mb-6 " style="width:850px">
-                <h1 class="heading ">Manage PG's</h1>
+                <h1 class="heading">Manage PG's</h1>
                 <hr>
-               <center><a href="create.php"  class="btn btn-dark m-5">+ ADD NEW PG </a></center> 
+               <center><a href="create.php"  class="btn m-5">+ ADD NEW PG </a></center> 
 
                     </div>
                 </div>
@@ -58,17 +100,19 @@
              <div class="row">
                  <div class="col-md-12 lead">
                      <div class="mt-2 mb-6 clearfix">
-                     <div style="margin-left:50px;width:1600px">
+                     <div style="margin-left:0px;width:1600px">
                      <center><div class="p-3 mb-2  mr-5 bg text-black" style ="font-size:30px">Manage details</div></center>
                    
                      
 
  </div>
- </div>
+ 
  </br> 
- <div style="margin-left:50px" id="show_table">
+ <div style="margin-left:0px" id="show_table">
     <table id="create" border="1"></table>
   </div>
+  </div>
+</body>
   <script>
 
 
@@ -83,8 +127,7 @@ const url ="https://iqbetspro.com/pg-management/GET-PG-Api.php";
 
 async function getapi(url) {
        // var manager_mail = document.getElementById("manager_email").value;
-       //var manager_mail = "manjuprasad.4327@gmail.com";//type ur mail id
-        var manager_mail =document.getElementById("manager_email").value;
+       var manager_mail = "manjuprasad.4327@gmail.com";//type ur mail id
    console.log("manager_mail=",manager_mail);
    
         fetch(url, {
@@ -140,7 +183,7 @@ tab += `<tr>
 <td>${r.address}</td>
 <td>${r.PG_Type}</td>
 <td>
-<button><a href="configure.php?PG_Name=${r.PG_Name}" class="btn btn-dark m-1">configure </a></button>
+<button><a href="configure.php?PG_Name=${r.PG_Name}" class="btn m-1">configure </a></button>
 </td>
 
 </tr>`;

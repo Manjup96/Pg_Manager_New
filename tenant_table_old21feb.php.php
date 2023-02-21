@@ -1,19 +1,102 @@
-<?php
-       include "./adminHeader.php";
-       include "./sidebar.php";
-       include "./commonlinks.php";
-       ?>
 
-<!-- <body class="h-0" onload=start()> -->
-<body class="h-0" >
+<!DOCTYPE html>
+<html lang="en" class="h-90">
+<head>
+<title>tenant form</title>
+		<!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- disable previous dates in Input date type -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="./assets/css/style.css"></link>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <!--<script type="text/javascript" src="./assets/js/tenant/tenantFormValidation.js"></script> -->        
+      
+<style>
+
+/* p.two {
+  border-style: solid;
+  border-width: 5px;
+  border-radius:10px;
+} */
+
+/* h1 {
+  color: dark;
+} */
+/* .wrapper{
+            width: 800px;
+            margin: 0 auto;
+        } */
+        /* table tr td:last-child{
+            width: 100px;
+        }  */
+  .btn {
+  background-color:  dark;
+  border: none;
+  color: white;
+  padding: 13px 25px;
+  padding:0rem 1rem 1rem 1rem;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+/* .btn:hover {
+  background-color: #DC7633;
+} */
+
+/* .form-group div
+    {
+      color: red;
+      size: 80%
+    }
+    .hidden
+    {
+      display:none;
+    }
+
+    .required::after{
+  content:" *";
+  color: red;
+  font-size:20px;
+}
+textarea{
+    width:100%;
+    padding:15px;
+    margin-top:5px;
+    border:1px solid #7ac9b7;
+    border-radius:5px;
+    margin-bottom:10px;
+    resize:none;
+    font-size:16px;
+  } */
+</style>
+
+
   <link rel="stylesheet" href="./assets/css/tenant_table.css">
   </link>
-  <!--<script type="text/javascript" src="./assets/js/tenant/delete.js"></script>-->
+
   <script type="text/javascript" src="./assets/js/tenant/filtertable.js"></script>
-  <!-- <script type="text/javascript" src="./assets/js/tenant/getall.js"></script> -->
   <script type="text/javascript" src="./assets/js/tenant/getsingle.js"></script>
-  <!--<script type="text/javascript" src="./assets/js/tenant/edit_form.js"></script>-->
-  <!--<script type="text/javascript" src="./assets/js/tenant/updatedate.js"></script>-->
+  <script type="text/javascript" src="./assets/js/tenant/validations.js"></script>
 
   
         <!-- disable previous dates in Input date type -->
@@ -22,18 +105,22 @@
 
 
  
-  <script type="text/javascript" src="./assets/js/tenant/validations.js"></script>
+
   <!-- open nav and close nav realated js is script.js -->
   <script type="text/javascript" src="./assets/js/script.js"></script>
+
+  <body class="smokewhite_bg_color">
+
+  <?php
+       include "./adminHeader.php";
+       include "./sidebar.php";
+       include "./commonlinks.php";
+       ?>
  
  <div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
- <script>
- document.getElementById("building").innerHTML=
-     localStorage.getItem("selected_building1");
-     //var buidling_name =  localStorage.getItem("selected_building1");
- </script>
+ 
 
  </div>
  
@@ -85,7 +172,8 @@
               <input type="date" class="form-control tenatJoiningDate" id="tenantJoiningDate" placeholder=""
                 name="tenantJoiningDate" readonly onclick="change_JoiningDate();">
             </div>
- 
+            
+
             <div class="form-group">
                       <label for="tenantComments">Comments</label>
                       <textarea id="tenantComments" name="tenantComments" placeholder="" rows="3" cols="38" style="height:150px" onkeyup="validateComments()">
@@ -105,25 +193,24 @@
   <!-- Edit form ends  -->
 
   <!-- Tenatn details header starts -->
-  <div class="wrapper" style="margin-right:700px" id="show_table">
+  <div class="wrapper" style="margin-right:800px" id="show_table">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-12 lead">
           <div class="mt-2 mb-6 clearfix">
-            <div style="margin-left:50px;width:900px">
+            <div style="margin-left:50px;width:830px">
               <center>
-                <div class="p-3 mb-2 bg text-black">Tenant Details</div>
+                <div class="p-3 mb-2 bg text-black" >Tenant Details</div>
               </center>
 
               <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
-
-                <button type="submit"><i class="fa fa-search"></i></button>
-                <a href="tenant.php" class="btn btn-dark pull-right" style="margin:10px" ;>
+                   <button type="submit"><i class="fa fa-search"></i></button>
+                <a href="tenant.php" class="btn btn-success pull-right" style="margin:10px" ;>
                 <i  class="fa fa-plus"></i>&nbsp;Add Tenant</a>
                    
                <!-- <button type="submit" class="btn btn-success " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button> -->
-                    <button type="submit" class="btn btn-dark " style="margin:10px"; 
+                    <button type="submit" class="btn btn-success " style="margin:10px"; 
                     onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>    
               </div>
             </div>
@@ -136,6 +223,12 @@
               <table id="tenants" border="1"></table>
 </div>
 
+</div>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+                
       
   <!-- tde Modal -->
   <div id="view-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
@@ -155,16 +248,30 @@
                            <div id="dynamic-content"></div>                             
                         </div> 
                         <div class="modal-footer"> 
-                              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>  
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>  
                         </div> 
                         
                  </div> 
               </div>
        </div>
+       
        <!-- /.modal  End -->    
     
           
+       <script>
+        //script for joining date
+function change_JoiningDate() {
+  document.getElementById("tenantJoiningDate").readOnly = false;
+}
+</script>
 
+
+       <script>
+        // script for selecting building name
+ document.getElementById("building").innerHTML=
+     localStorage.getItem("selected_building1");
+     //var buidling_name =  localStorage.getItem("selected_building1");
+ </script>
              
 
 <!--disable previous dates in Input date type -->
@@ -187,88 +294,13 @@
 });
    </script> 
 
-<!-- on date change -->
-<script>
-function change_JoiningDate() {
-  document.getElementById("tenantJoiningDate").readOnly = false;
-}
-</script>
-
 <!-- form validation -->
-<script> 
-//save_edit_tenant
-document.getElementById("save_tenant").disabled = true;
+<script>
+document.getElementById("save_tenant").disabled = false;
 var mobile_check=0,name_check=0,email_check=0,adhar_check=0;
 
 
-function initial_check()
-{
-    
-     var mobile = document.getElementById("tenantMobileNumber").value;
-     console.log("MobileNumber=",mobile);
-
-     var mobileRegEX =/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
-
-     if(mobileRegEX.test(mobile))
-     {
-      document.getElementById("mobile_error").style.display = "none";
-      mobile_check=1;
-
-     } else
-     { document.getElementById("mobile_error").style.display = "block";  
-      mobile_check=0;
-         
-     } 
-      var name = document.getElementById("tenantName").value;
-     console.log("Name=",name);
-
-     var nameRegEx=  /^[a-zA-Z ]{2,30}$/;
-
-     if(nameRegEx.test(name))
-     {
-     // console.log("true");
-     document.getElementById("name_error").style.display="none";
-     name_check=1;
-     }
-     else
-     {document.getElementById("name_error").style.display="block"; 
-     name_check=0;
-     }
-     // console.log("Error");
- var email = document.getElementById("tenantEmail").value;
-    console.log("Email=",email);
-
-    var emailRegEx=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-    if(emailRegEx.test(email))
-    {
-    // console.log("true");
-    document.getElementById("email_error").style.display="none";
-    email_check=1;
-    }
-    else
-    {document.getElementById("email_error").style.display="block"; 
-    email_check=0;
-   
-    }
-     var adhar = document.getElementById("tenantAdharCardNumber").value;
-    console.log("AdharCardNumber=",adhar);
-
-    var adharRegEX =/^([0-9]{4}[0-9]{4}[0-9]{4}$)|([0-9]{4}\s[0-9]{4}\s[0-9]{4}$)|([0-9]{4}-[0-9]{4}-[0-9]{4}$)/;
-
-    if(adharRegEX.test(adhar))
-    {
-    document.getElementById("adhar_error").style.display = "none";
-    adhar_check=1;
-
-    } else
-    { document.getElementById("adhar_error").style.display = "block";  
-    adhar_check=0;
-        
-    } 
-
-
-     
+function initial_check(){
   if(email_check==1 &&  mobile_check==1 && name_check==1)
   { document.getElementById("save_tenant").disabled = false;
   }
@@ -290,18 +322,14 @@ function validateMobileNumber(){
 
      } else
      { document.getElementById("mobile_error").style.display = "block";  
-      mobile_check=0;
-         
-     } 
-     
+      mobile_check=0;} 
    
-//   if(email_check==1 &&  mobile_check==1 && name_check==1 && adhar_check==1 )
-//   { document.getElementById("save_tenant").disabled = false;
-//   }
-//   else{
-//   document.getElementById("save_tenant").disabled = true;
-//   }
-initial_check();
+   if(email_check==1 &&  mobile_check==1 && name_check==1 && adhar_check==1 )
+  { document.getElementById("save_tenant").disabled = false;
+  }
+  else{
+  document.getElementById("save_tenant").disabled = true;
+  }
 }
 
 function validateName(){
@@ -323,7 +351,12 @@ function validateName(){
      }
      // console.log("Error");
 
-  initial_check();
+  if(email_check==1 &&  mobile_check==1 && name_check==1 && adhar_check==1)
+    { document.getElementById("save_tenant").disabled = false;
+    }
+    else{
+    document.getElementById("save_tenant").disabled = true;
+  }
 }
 
 
@@ -347,14 +380,13 @@ function validateEmail(){
     }
     // console.log("Error");
 
-//   if(email_check==1 &&  mobile_check==1 && name_check==1 && adhar_check==1)
-//     { document.getElementById("save_tenant").disabled = false;
-//     }
-//     else{
-//     document.getElementById("save_tenant").disabled = true;
+  if(email_check==1 &&  mobile_check==1 && name_check==1 && adhar_check==1)
+    { document.getElementById("save_tenant").disabled = false;
+    }
+    else{
+    document.getElementById("save_tenant").disabled = true;
 
-//     }
-initial_check();
+    }
 }
 
 function validateAdharCardNumber(){
@@ -370,17 +402,14 @@ function validateAdharCardNumber(){
 
     } else
     { document.getElementById("adhar_error").style.display = "block";  
-    adhar_check=0;
-        
-    } 
+    adhar_check=0;} 
    
-//   if(email_check==1 &&  mobile_check==1 && name_check==1 && adhar_check==1 )
-//     { document.getElementById("save_tenant").disabled = false;
-//     }
-//     else{
-//     document.getElementById("save_tenant").disabled = true;
-//     }
-initial_check();
+  if(email_check==1 &&  mobile_check==1 && name_check==1 && adhar_check==1 )
+    { document.getElementById("save_tenant").disabled = false;
+    }
+    else{
+    document.getElementById("save_tenant").disabled = true;
+    }
 }
 
 function validateComments(){
@@ -479,7 +508,7 @@ function validateComments(){
 
            <button data-toggle="modal" data-target="#view-modal" 
 			      data-id="${r.id}" 
-            id="getUser" class="btn btn-sm btn-dark"><i class="glyphicon glyphicon-eye-open"></i> View</button>
+            id="getUser" class="btn btn-sm " style="background-color:#84817a;"><i class="glyphicon glyphicon-eye-open"></i> View</button>
             
              </div>
              </td>

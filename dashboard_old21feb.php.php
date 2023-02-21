@@ -2,7 +2,7 @@
 <html>
 <head>
    
-<body style="background-color:#D6DBDF;">
+
   <title>Admin</title>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,7 +53,7 @@
                          
                            
 <div class="form_group mt-5 text-center" id="before_selecting_building_name_dropdown">
- <!--  <select class="form-control text-center" name="" id="building"></select> --> 
+  <!-- <select class="form-control text-center" name="" id="building"></select>  -->
  <label for="building" style="font-weight:bold;color:black;margin-right:0px">Select building:</label>
    <select name="building" id="building" onchange="selectedBuilding()">
        
@@ -143,8 +143,6 @@
                                     <div class="card bg-secondary text-white shadow">
                                         <div class="card-body">
                                           Complaints : <label id="complaints" onclick="window.location.href ='complaint_table.php';"> </label>
-                                          <input type="text" id="Solved" hidden>
-                                          <input type="text" id="Pending" hidden>
                                           <!--Complaints  <label id="complaints" onclick="javascript:alert('event has been triggered');"></label>-->
                                             <div class="text-white-50 small"></div>
                                         </div>
@@ -170,15 +168,13 @@
                             </div>-->
 
               <!-- Barchart -->
+          
+    <div class="container">
+    <div class="row">            
+    <div class=" col-lg-3 mb-4">
     <div class="chartCard">
       <div class="chartBox">
         <canvas id="myChart"></canvas>
-      </div>
-    </div>
-    
-     <div class="chartCard">
-      <div class="chartBox">
-        <canvas id="accounts"></canvas>
       </div>
     </div>
 
@@ -208,6 +204,9 @@
 
 
 </div>
+</div>
+<!-- </div>
+</div> -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script type="text/javascript" src="./assets/js/ajaxWork.js"></script>    
     <script type="text/javascript" src="./assets/js/script.js"></script>
@@ -358,19 +357,10 @@ const get_total_complaints="https://iqbetspro.com/pg-management/total-no-of-comp
             let result = data;
              
              let data1 = result;
-              console.log(data1[0]['Solved Complaints']);
-             console.log(data1[0]['Total Complaints']);
              
+             console.log(data1[0]['Total Complaints']);
             let lab=`<label>${data[0]['Total Complaints']}</label>`;
-            var solved1=data1[0]['Solved Complaints'];
-             var pending1=data1[0]['Pending Complaints'];
          document.getElementById("complaints").innerHTML = lab;
-          document.getElementById("Solved").value= solved1;
-         document.getElementById("Pending").value = pending1;
-         
-        //          "Total Complaints": 22,
-        // "Solved Complaints": "3",
-        // "Pending Complaints": "6"
 
               
         }
@@ -430,7 +420,7 @@ function show_selectedBuilding(){
     function selectedBuilding(){
          
        
-        var selected_building= document.getElementById("building").value;;
+        var selected_building= document.getElementById("building").value;
         // alert(selected_building);
         console.log(selected_building);
         localStorage.setItem("selected_building1", selected_building);
@@ -446,133 +436,61 @@ function show_selectedBuilding(){
     }
 </script>
         
- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-    
-<script src="https://unpkg.com/chart.js-plugin-labels-dv/dist/chartjs-plugin-labels.min.js"></script>
 
   <!-- Barchart -->
   <script>
-    
-
-
-var solved= 5;
-var pending= 17;
-
-// var solved=document.getElementById("Solved").value;
-// var pending=document.getElementById("Pending").value;
-
-// console.log("solved=",solved);
-// console.log("penidng=",solved);
-
-const data = {
-      labels: ['Solved', 'Pending'],
+    // setup 
+    const data = {
+      labels: [ 'Total Bed', 'Available Beds'],
       datasets: [{
-        label: 'Complaints',
-        data: [solved, pending],
+        label: 'PG Manager',
+        data: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
         backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          
+          'rgba(40, 40, 40, 0.2)',
+          'rgba(54, 60, 60, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(0, 0, 0, 0.2)'
         ],
         borderColor: [
           'rgba(255, 26, 104, 1)',
           'rgba(54, 162, 235, 1)',
-          
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)',
+          'rgba(0, 0, 0, 1)'
         ],
-        borderWidth: 1
+        borderWidth: 1,
+        barThickness:80
       }]
     };
 
-
     // config 
     const config = {
-      type: 'pie',
+      type: 'bar',
       data,
       options: {
-        plugins: {
-          labels: {
-            render : (args)=> {
-            console.log(args);
-            return `${args.label} : ${args.value}`
-            //return `${args.label} : ${args.value} in  ${args.percentage}%`
-          }
+        scales: {
+          y: {
+            beginAtZero: true
           }
         }
       }
     };
-
-   
 
     // render init block
     const myChart = new Chart(
       document.getElementById('myChart'),
       config
     );
-
-
-    
-
-
-var solved= 5;
-var pending= 17;
-
-// var solved=document.getElementById("Solved").value;
-// var pending=document.getElementById("Pending").value;
-
-// console.log("solved=",solved);
-// console.log("penidng=",solved);
-
-const data1 = {
-      labels: ['Income', 'Expenditure'],
-      datasets: [{
-        label: 'Accounts',
-        data: [solved, pending],
-        backgroundColor: [
-          'rgba(255, 26, 104, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          
-        ],
-        borderColor: [
-          'rgba(255, 26, 104, 1)',
-          'rgba(54, 162, 235, 1)',
-          
-        ],
-        borderWidth: 1
-      }]
-    };
-console.log("after accounts values");
-
-    // config 
-    const config_accounts = {
-      type: 'pie',
-      data1,
-      options: {
-        plugins: {
-          labels: {
-            render : (args1)=> {
-            console.log("accounts pie chart values=",args1);
-            return `${args1.label} : ${args1.value}`
-            //return `${args.label} : ${args.value} in  ${args.percentage}%`
-          }
-          }
-        }
-      }
-    };
-
-   
-
-    // render init block
-    const accounts = new Chart(
-      document.getElementById('accounts'),
-        config_accounts
-    );
-
-
     </script>
    
     <!-- Barchat CSS -->
      <style>
-     
+      
      * {
         margin: 0;
         padding: 0;
@@ -595,18 +513,18 @@ console.log("after accounts values");
         display: flex;
         align-items: center;
         justify-content: start;
-        margin-left:100px;
+        margin-left:5px;
       }
       
       .chartBox {
-        width: 300px;
+        width: 400px;
         padding: 20px;
         border-radius: 20px;
         border: solid 3px rgba(54, 162, 235, 1);
         
       }
 
-    </style>
+    </style> 
 
  <script>
   var manager_mail = document.getElementById("manager_email").value;

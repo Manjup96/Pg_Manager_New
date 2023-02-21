@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<!-- <body style="background-color:white;"> -->
-  <title>Admin</title>
+<body style="background-color:#ececec;">
+  <title>Configure </title>
  	<!-- Required meta tags -->
-     <meta charset="utf-8">
+   <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
@@ -27,47 +26,60 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-      
-
-
-</head>
-<body class="smokewhite_bg_color">
-<?php
+        <?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
            
         ?>
- <div class="wrapper" style="margin-right:700px"> 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="mt-2 mb-6 " style="width:850px">
-                <h1 class="heading ">Manage PG's</h1>
-                <hr>
-               <center><a href="create.php"  class="btn btn-dark m-5">+ ADD NEW PG </a></center> 
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-           
+
+</head>
+<style>
+  
+     .btn {
+  background-color:#117A65;
+  border: box;
+  color: white;
+  padding: 12px 16px;
+  padding:0rem 1rem 1rem 1rem;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #ABEBC6;
+}
+p.two {
+  border-style: solid;
+  border-width: medium;
+  border-radius:22px;
+}
+
+h1 {
+  color: #B9770E;
+}
+
+</style> 
+
+<body>
+  
+    <!-- <script type="text/javascript" src="./assets/js/script.js"></script> -->
     <div class="wrapper" style="margin-right:700px" id="show_table">
          <div class="container-fluid" >
              <div class="row">
                  <div class="col-md-12 lead">
                      <div class="mt-2 mb-6 clearfix">
-                     <div style="margin-left:50px;width:1600px">
-                     <center><div class="p-3 mb-2  mr-5 bg text-black" style ="font-size:30px">Manage details</div></center>
+                     <div style="margin-left:50px;width:1020px">
+                     <center><div class="p-3 mb-2  mr-5 bg-dark text-white">Configure details</div></center>
                    
                      
-
  </div>
  </div>
  </br> 
  <div style="margin-left:50px" id="show_table">
-    <table id="create" border="1"></table>
+    <table id="configure" border="1"></table>
   </div>
   <script>
 
@@ -78,33 +90,21 @@
     
 
 
-const url ="https://iqbetspro.com/pg-management/GET-PG-Api.php";
-
-
+const url ="https://iqbetspro.com/pg-management/GET-configure-PG-details.php";
 async function getapi(url) {
-       // var manager_mail = document.getElementById("manager_email").value;
-       //var manager_mail = "manjuprasad.4327@gmail.com";//type ur mail id
-        var manager_mail =document.getElementById("manager_email").value;
-   console.log("manager_mail=",manager_mail);
-   
-        fetch(url, {
-                  method: 'POST',
-                  body: JSON.stringify({
-   "manager_email":manager_mail,
-   
+console.log('inside function..');
+
+let result = await fetch(url);
+
+let response = await result.json();
+console.log('data',response);
+show(response);
+//document.getElementById("demo").innerHTML = response;
+
 }
-           )
-          })
-          .then(function(response){ 
-          return response.json()})
-          .then(function(data)
-          {
-                console.log(data);
-                show(data);
-        })
-    }
-        
-        getapi(url);
+
+getapi(url);
+
 function show(data) {
 let tab =
 `<tr>
@@ -112,16 +112,11 @@ let tab =
 <th>PG Name</th>
 <th>manager mobile</th>
 <th>manager email</th>
-<th>landmark</th>
-<th>city</th>
-<th>pincode</th>
-<th>state</th>
-<th>address</th>
-<th>PG Type</th>
+<th>floor</th>
+<th>room</th>
+<th>bed</th>
 <th>Action</th>
 </tr>`;
-
-//
 
 let i=1;
 // Loop to access all rows
@@ -133,23 +128,21 @@ tab += `<tr>
 <td>${r.PG_Name}</td>
 <td>${r.manager_mobile}</td>
 <td>${r.manager_email}</td>
-<td>${r.landmark}</td>	
-<td>${r.city}</td>
-<td>${r.pincode}</td>
-<td>${r.state}</td>
-<td>${r.address}</td>
-<td>${r.PG_Type}</td>
+<td>${r.floor}</td>	
+<td>${r.room}</td>
+<td>${r.bed}</td>
 <td>
-<button><a href="configure.php?PG_Name=${r.PG_Name}" class="btn btn-dark m-1">configure </a></button>
+    
+   <button><a href="manage_rooms.php?PG_Name=${r.PG_Name}&manager_mobile=${r.manager_mobile}&manager_email=${r.manager_email}&floor=${r.floor}&room=${r.room}&bed=${r.bed}">Manage beds </a></button> 
+   
+   
 </td>
-
 </tr>`;
 i=i+1;
 }  
 // Setting innerHTML as tab variable  onclick='changeImage(\""+item.product_image2+"\");'
-document.getElementById("create").innerHTML = tab;
+document.getElementById("configure").innerHTML = tab;
 }
 </script>
 </body>
-    </html>
-  
+</html>

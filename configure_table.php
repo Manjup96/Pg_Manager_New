@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#ececec;">
+
   <title>Configure </title>
  	<!-- Required meta tags -->
    <meta charset="utf-8">
@@ -26,44 +26,18 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-        <?php
+    
+
+
+</head>
+
+<body class="smokewhite_bg_color">
+<?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
            
         ?>
-
-
-</head>
-<style>
-  
-     .btn {
-  background-color:#117A65;
-  border: box;
-  color: white;
-  padding: 12px 16px;
-  padding:0rem 1rem 1rem 1rem;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: #ABEBC6;
-}
-p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:22px;
-}
-
-h1 {
-  color: #B9770E;
-}
-
-</style> 
-
-<body>
   
     <!-- <script type="text/javascript" src="./assets/js/script.js"></script> -->
     <div class="wrapper" style="margin-right:700px" id="show_table">
@@ -71,8 +45,8 @@ h1 {
              <div class="row">
                  <div class="col-md-12 lead">
                      <div class="mt-2 mb-6 clearfix">
-                     <div style="margin-left:50px;width:1020px">
-                     <center><div class="p-3 mb-2  mr-5 bg-dark text-white">Configure details</div></center>
+                     <div style="margin-left:50px;width:1200px">
+                     <center><div class="p-3 mb-2  mr-5 bg text-black">Configure details</div></center>
                    
                      
  </div>
@@ -133,7 +107,7 @@ tab += `<tr>
 <td>${r.bed}</td>
 <td>
     
-   <button><a href="manage_rooms.php?PG_Name=${r.PG_Name}&manager_mobile=${r.manager_mobile}&manager_email=${r.manager_email}&floor=${r.floor}&room=${r.room}&bed=${r.bed}">Manage beds </a></button> 
+   <button><a href="manage_rooms.php?PG_Name=${r.PG_Name}&floor=${r.floor}&room=${r.room}&bed=${r.bed}" class="btn btn-dark m-1">Manage beds </a></button> 
    
    
 </td>

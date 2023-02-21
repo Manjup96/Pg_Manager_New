@@ -60,60 +60,7 @@
 
 
 </head>
-<style>
-/* p.two {
-  border-style: solid;
-  border-width: 5px;
-  border-radius:10px;
-}
 
-h1 {
-  color: dark;
-}
-.wrapper{
-            width: 800px;
-            margin: 0 auto;
-        }
-        table tr td:last-child{
-            width: 100px;
-        }  */
-        
-  .btn {
-  background-color:  dark;
-  border: none;
-  color: white;
-  padding: 13px 25px;
-  padding:0rem 1rem 1rem 1rem;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-/* Darker background on mouse-over */
-/* .btn:hover {
-  background-color: #DC7633;
-} */
-
-/* .form-group div
-    {
-      color: red;
-      size: 80%
-    }
-    .hidden
-    {
-      display:none;
-    } */
-/* 
-    textarea{
-    width:100%;
-    padding:15px;
-    margin-top:5px;
-    border:1px solid #7ac9b7;
-    border-radius:5px;
-    margin-bottom:10px;
-    resize:none;
-    font-size:16px;
-  } */
-</style>
 		
     <body>
     
@@ -177,8 +124,8 @@ h1 {
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
                      <button type="submit"><i class="fa fa-search"></i></button>
-                        <a href="news.php" class="btn btn-success pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add News</a>
-                        <button type="submit" class="btn btn-success " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
+                        <a href="news.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add News</a>
+                        <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
 
 </div>
 </div>

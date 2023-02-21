@@ -6,16 +6,15 @@
  $bed = $_GET['bed'];
  
  $PG_Name=$_GET['PG_Name'];
- $manager_mobile=$_GET['manager_mobile'];
- $manager_email=$_GET['manager_email'];
+//  $manager_mobile=$_GET['manager_mobile'];
+//  $manager_email=$_GET['manager_email'];
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<body style="background-color:#ececec;">
-  <title>Bootstrap 5 Example</title>
+  <title>Manage Rooms</title>
  	<!-- Required meta tags -->
    <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,33 +38,20 @@
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
 <script type="text/javascript" src="./assets/js/script.js"></script> 
-        <?php
+ 
+
+
+</head>
+
+
+<body class="smokewhite_bg_color">
+<?php
             include "./adminHeader.php";
             include "./sidebar.php";
             include "./commonlinks.php";
            
         ?>
-
-
-</head>
-<style>
-  .btn {
-  background-color: white;
-  border: none;
-  color: black;
-  padding: 12px 16px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: rgb(190, 192, 199);
-}
-</style>
-
-<body>
- <div  id="data">
+ <div  id="data" hidden>
  <h1> Floor No: <?php echo $floor ?></h1>
 <input type="text" id="floor_num" value=" <?php echo $floor ?>">
 <h1> Room No: <?php echo $room ?></h1>
@@ -74,7 +60,7 @@
 <input type="text" id="bed_num" value="<?php echo $bed ?>"> 
 </div>
 
-<div class="container-fluid p-5 bg-primary text-white text-center">
+<div class="container-fluid p-5 bg text-black text-center">
   <h1>manage Rooms </h1>
   <!-- <p>Resize this responsive page to see the effect!</p>  -->
 </div>
@@ -85,7 +71,8 @@
        <h3>Building 
          <!-- <button class="btn" id="add_more_building_fields" ><i class=" fa fa-solid fa-plus"></i></button> --> </h3>  
       
-      <button class="building" role="button">MNJ1</button>
+      <!--<button class="building" role="button">MNJ1</button>--> 
+     <button class="btn" id="PG_Name" value=" <?php echo $PG_Name  ?>" >  <?php echo $PG_Name  ?></button> 
       
       <div id="survey_building_options"> 
         <div id="div_building_container"></div>
@@ -131,7 +118,7 @@
     
     </div>
   </div>
-</body>
+
 <script>
    document.getElementById("data").style.display="block";
 </script>
@@ -143,20 +130,294 @@ var survey_floor_options = document.getElementById('survey_floor_options');
 var add_more_floor_fields = document.getElementById('add_more_floor_fields');
 var remove_floor_fields = document.getElementById('remove_floor_fields');
 var floor_num = document.getElementById('floor_num').value;
-console.log(floor_num);
+ 
+  // for room fields  
 
-for(var i=1;i<=floor_num;i++)
- { survey_floor_options = document.getElementById("survey_floor_options");
+var survey_room_options = document.getElementById('survey_room_options');
+var add_more_room_fields = document.getElementById('add_more_room_fields');
+var remove_room_fields = document.getElementById('remove_room_fields');
+var room_num = document.getElementById('room_num').value;
+console.log("room_num=",room_num);
+console.log("parse INt room_num=",101+parseInt(room_num));
+
+
+   
+// for bed fields  
+var alpha=65;
+let text = String.fromCharCode(alpha);
+var survey_bed_options = document.getElementById('survey_bed_options');
+var add_more_bed_fields = document.getElementById('add_more_bed_fields');
+var remove_bed_fields = document.getElementById('remove_bed_fields');
+var bed_num = document.getElementById('bed_num').value;
+console.log("bed_num=",bed_num);
+
+
+
+  var final_floor_no=floor_num;  
+   var final_room_no=room_num;  
+  console.log("final floor n room numbers are",final_floor_no,final_room_no);
+  
+  var rooms_array=[];
+//int l,m,n,floor_num=5,room_num=2;
+    for(l=101;l<=(parseInt(final_floor_no)*100)+parseInt(room_num);l++)
+       {
+    for(m=1;m<=parseInt(room_num);m++)
+        { 
+           for(n=1;n<=parseInt(final_floor_no);n++)
+           {
+               if(l>(n*100+parseInt(room_num)) && l<=((n+1)*100))
+                l=(n+1)*100+1;
+              
+           }
+        }
+           rooms_array.push(l);
+       }
+
+
+console.log(rooms_array);
+
+
+
+
+var beds_array=[],ii,jj,kk,no_of_beds=2;
+function removeDuplicates(arr) {
+    //console.log("in removeDuplicates(arr) fucnrtion");
+      let unique = arr.reduce(function (acc, curr) {
+            if (!acc.includes(curr))
+                acc.push(curr);
+            return acc;
+        }, []);
+        return unique;
+    }
+rooms_array=removeDuplicates(rooms_array);
+//console.log(removeDuplicates(rooms_array));
+
+    console.log("no of rooms=",rooms_array.length);
+    console.log(" rooms=",rooms_array);
+      for (jj=0;jj<rooms_array.length;jj++)
+      {
+        for(ii=1;ii<=no_of_beds;ii++)
+        {
+            kk=rooms_array[jj]+"_"+ii;
+            beds_array.push(kk);
+        }
+        
+      }
+
+
+console.log(beds_array);
+
+const buttonForBeds = e => {
+    //  console.log("button pressed room num:",e.target.id); 
+     bedsUnderSpecificRoomsDisplay(e.target.id);
+}
+var current_beds=[];
+// bedsUnderSpecificRoomsDisplay(101);
+function bedsUnderSpecificRoomsDisplay(roomNumber){
+    
+    console.log("button pressed room num:",roomNumber); 
+    var check_bed= roomNumber+"_"+1;
+    console.log("floor_num",floor_num);
+    // for(var ty=0;ty<beds_array.length;ty++){
+    //     var bed_check = document.getElementById(beds_array[ty]);
+    //     if(bed_check)
+    //       current_beds.push(beds_array[ty]);
+        
+    // }
+    // console.log("initial beds=",current_beds);
+    if(current_beds.includes(check_bed))
+    {
+        console.log("Bed already exists");
+    }
+    else
+    {
+        for(var t=1;t<=no_of_beds;t++)
+          {
+              var bed_button_check=document.getElementById(roomNumber+"_"+t);
+              console.log("Button check:",bed_button_check);
+              if(bed_button_check)
+              {
+                
+              }
+              else
+              {
+              survey_bed_options = document.getElementById("survey_bed_options");
+              const btn =  document.createElement("BUTTON");
+              //btn.innerHTML = k;
+              btn.innerHTML = roomNumber+"_"+t;
+              //giving Id to Bed 
+              btn.id=roomNumber+"_"+t;
+              
+             
+              var style = document.createElement('style');
+              style.type = 'text/css';
+              style.innerHTML = '.BttnClass  {margin:10px}';
+              document.head.appendChild(style);
+              btn.className="BttnClass";
+              survey_bed_options.appendChild(btn);
+              beds_array.push(roomNumber+"_"+t);
+              current_beds.push(roomNumber+"_"+t);
+                    
+              }
+              
+
+              
+          }
+    }
+    console.log("before removing duplicate current_beds=",current_beds);
+  current_beds=removeDuplicates(current_beds);
+  console.log("after removing current_beds=",current_beds);
+  
+    var to_hide="";
+    // console.log("hided beds=",typeof(beds_array));
+    beds_array=removeDuplicates(beds_array);
+    console.log("Beds array =",beds_array);
+ 
+ 
+const namesArr = beds_array;
+const namesToDeleteArr =current_beds;
+const namesToDeleteSet = new Set(namesToDeleteArr);
+const newArr = namesArr.filter((name) => {
+  // return those elements not in the namesToDeleteSet
+  return !namesToDeleteSet.has(name);
+});
+
+console.log("after removing Duplicate beds from  Beds array=",newArr);
+
+
+var to_hide="";
+     for( var rt=0;rt<newArr.length;rt++)
+     {
+        { 
+            to_hide = document.getElementById(newArr[rt]);
+            
+                        if(to_hide)
+                            {
+                                 to_hide.remove();
+                            }
+            
+           
+        }
+     }
+     
+     current_beds=[];
+}
+
+
+var j=0;
+roomsUnderSpecificFloorDisplay(1);
+function roomsUnderSpecificFloorDisplay(id){
+    var no_of_rooms1=parseInt(final_room_no);
+    console.log("Floor Number: ",id);
+    var x=1,r=0,v=id,y,flr;
+    var counter=0;
+    if(parseInt(id)!=1)
+    {
+        console.log("floor_no=",id);
+        for( flr=0;flr<rooms_array.length;flr++)
+           { 
+            //   console.log(rooms_array[flr]);
+            
+                r = (parseInt(id)*100);
+            if(!((rooms_array[flr]>r) && (rooms_array[flr]<(r+99)))==false)
+             console.log("check=",r,rooms_array[flr],!((rooms_array[flr]>r) && (rooms_array[flr]<(r+99)))==false);
+            
+            if(!((rooms_array[flr]>r) && (rooms_array[flr]<(r+99))))
+                        { 
+                            // console.log("going to hide")
+                            to_hide = document.getElementById(rooms_array[flr]);
+                            // console.log(to_hide);
+                        if(to_hide)
+                            {
+                                to_hide.style.display = "none";
+                                // console.log("room no:",rooms_array[flr]);
+                            }
+                        }
+                        else{
+               to_hide = document.getElementById(rooms_array[flr]);
+               if(to_hide)
+                            {
+                                to_hide.style.display = "block";
+                                // console.log("room no:",rooms_array[flr]);
+                            }
+           }
+           
+          
+           }
+           
+    
+        
+       bedsUnderSpecificRoomsDisplay(r+1); 
+    }
+    
+    flr=0;r=0;
+    
+    
+    for(j=(id * 100)+1;j<((id * 100)+1)+parseInt(final_room_no);j++) 
+ { 
+     console.log("Final room no and id ",final_floor_no,id);
+  if(!(document.getElementById(j)))
+  {
+      survey_room_options = document.getElementById("survey_room_options");
   const btn =  document.createElement("BUTTON");
-  btn.innerHTML = i;
+  btn.innerHTML = j;
+  btn.id=j;
+  rooms_array.push(j);
   var style = document.createElement('style');
   style.type = 'text/css';
   style.innerHTML = '.BttnClass  {margin:10px}';
   document.head.appendChild(style);
   btn.className="BttnClass";
-  survey_floor_options.appendChild(btn);}
+  survey_room_options.appendChild(btn);
+  btn.addEventListener("click", buttonForBeds);
+  }
+}
 
-  var final_floor_no=floor_num;    
+if(id==1){
+     for( flr=0+room_num;flr<rooms_array.length;flr++){
+         to_hide = document.getElementById(rooms_array[flr]);
+              if(to_hide)
+                            {
+                                to_hide.style.display = "none";
+                                // console.log("room no:",rooms_array[flr]);
+                            }
+     }
+     for( flr=0;flr<room_num;flr++){
+         to_hide = document.getElementById(rooms_array[flr]);
+              if(to_hide)
+                            {
+                                to_hide.style.display = "block";
+                                // console.log("room no:",rooms_array[flr]);
+                            }
+     }
+     bedsUnderSpecificRoomsDisplay(101); 
+}
+
+}
+
+
+const buttonPressed = e => {
+    // console.log("button pressed floor num:",e.target.id); 
+ //final_floor_no=e.target.id;
+  roomsUnderSpecificFloorDisplay(e.target.id);// Get ID of Clicked Element
+}
+for(var i=1;i<=final_floor_no;i++)
+ { 
+     survey_floor_options = document.getElementById("survey_floor_options");
+  const btn =  document.createElement("BUTTON");
+  btn.innerHTML = i;
+  btn.id=i; // floor no 
+  var style = document.createElement('style');
+  style.type = 'text/css';
+  style.innerHTML = '.BttnClass  {margin:10px}';
+  document.head.appendChild(style);
+  btn.className="BttnClass";
+  survey_floor_options.appendChild(btn);
+ btn.addEventListener("click", buttonPressed);
+
+     
+ }
+  
 
 add_more_floor_fields.onclick = function()
 {
@@ -166,6 +427,7 @@ add_more_floor_fields.onclick = function()
     const survey_floor_options = document.getElementById("survey_floor_options");
     const btn =  document.createElement("BUTTON");
     btn.innerHTML = i;
+    btn.id=i;
     var style = document.createElement('style');
     style.type = 'text/css';
     style.innerHTML = '.BttnClass  {margin:10px}';
@@ -174,6 +436,7 @@ add_more_floor_fields.onclick = function()
     survey_floor_options.appendChild(btn);
     i++;
     final_floor_no=i-1;
+    btn.addEventListener("click", buttonPressed);
   console.log("Final floor nu:",final_floor_no);
   }
   else
@@ -183,7 +446,8 @@ add_more_floor_fields.onclick = function()
 }
 
 remove_floor_fields.onclick = function()
-{ i--;
+{ 
+    i--;
   final_floor_no=i-1;
   console.log("Final floor nu:",final_floor_no);
   var button = survey_floor_options.getElementsByTagName('BUTTON');
@@ -195,37 +459,37 @@ remove_floor_fields.onclick = function()
 
 
 
-    // for room fields  
-
-var survey_room_options = document.getElementById('survey_room_options');
-var add_more_room_fields = document.getElementById('add_more_room_fields');
-var remove_room_fields = document.getElementById('remove_room_fields');
-var room_num = document.getElementById('room_num').value;
-console.log("room_num=",room_num);
- for(var j=101;j<=101+parseInt(room_num);j++) 
- { 
   
-  survey_room_options = document.getElementById("survey_room_options");
-  const btn =  document.createElement("BUTTON");
-  btn.innerHTML = j;
-  var style = document.createElement('style');
-  style.type = 'text/css';
-  style.innerHTML = '.BttnClass  {margin:10px}';
-  document.head.appendChild(style);
-  btn.className="BttnClass";
-  survey_room_options.appendChild(btn);
-}
+
+// for loop 
+
+
+
+//  for(var j=101;j<101+parseInt(room_num);j++) 
+//  { 
+  
+//   survey_room_options = document.getElementById("survey_room_options");
+//   const btn =  document.createElement("BUTTON");
+//   btn.innerHTML = j;
+//   var style = document.createElement('style');
+//   style.type = 'text/css';
+//   style.innerHTML = '.BttnClass  {margin:10px}';
+//   document.head.appendChild(style);
+//   btn.className="BttnClass";
+//   survey_room_options.appendChild(btn);
+// }
+
  
-  var final_room_no=room_num;   
+  
 
 add_more_room_fields.onclick = function()
 {
-  if(j<=10)
+  if(j>=10)
   {
    const survey_room_options = document.getElementById("survey_room_options");
    const btn =  document.createElement("BUTTON");
    btn.innerHTML = j;
-
+   btn.id=j;
    var style = document.createElement('style');
    style.type = 'text/css';
    style.innerHTML = '.BttnClass  {margin:10px}';
@@ -235,6 +499,8 @@ add_more_room_fields.onclick = function()
    survey_room_options.appendChild(btn);
    j++;
    final_room_no=j-2;
+   rooms_array.push(j);
+   btn.addEventListener("click", buttonForBeds);
   console.log("Final room num:",final_room_no);
   }
   else
@@ -264,36 +530,32 @@ remove_room_fields.onclick = function()
 //      }
 // }
 
-   
-// for bed fields  
-var survey_bed_options = document.getElementById('survey_bed_options');
-var add_more_bed_fields = document.getElementById('add_more_bed_fields');
-var remove_bed_fields = document.getElementById('remove_bed_fields');
-var bed_num = document.getElementById('bed_num').value;
-console.log("bed_num=",bed_num);
 
-for(var k=100;k<=100+parseInt(bed_num);k++) 
- { 
+
+
+// for(var k=101;k<=100+parseInt(bed_num);k++) 
+//  { 
   
-  survey_room_options = document.getElementById("survey_room_options");
-  const btn =  document.createElement("BUTTON");
-  btn.innerHTML = k;
-  var style = document.createElement('style');
-  style.type = 'text/css';
-  style.innerHTML = '.BttnClass  {margin:10px}';
-  document.head.appendChild(style);
-  btn.className="BttnClass";
-  survey_room_options.appendChild(btn);
-}
+//   survey_bed_options = document.getElementById("survey_bed_options");
+//   const btn =  document.createElement("BUTTON");
+//   //btn.innerHTML = k;
+//   btn.innerHTML = k+"_"+text;
+//   var style = document.createElement('style');
+//   style.type = 'text/css';
+//   style.innerHTML = '.BttnClass  {margin:10px}';
+//   document.head.appendChild(style);
+//   btn.className="BttnClass";
+//   survey_bed_options.appendChild(btn);
+// }
  
   var final_bed_no=bed_num;   
 
-var alpha=65;
-let text = String.fromCharCode(alpha);
+
+
 no_of_bed=1;
 add_more_bed_fields.onclick = function()
 {
-  if(no_of_bed<=4)
+  if(no_of_bed<=final_bed_no)
   {
     text = String.fromCharCode(alpha);
     const survey_bed_options = document.getElementById("survey_bed_options");
@@ -307,7 +569,8 @@ add_more_bed_fields.onclick = function()
     survey_bed_options.appendChild(btn);
     alpha++;
     no_of_bed++;
-    final_room_no= no_of_bed-1;
+    
+    final_bed_no= no_of_bed-1;
   console.log("Final bed num:",final_bed_no);
   }
   else

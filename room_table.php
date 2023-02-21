@@ -36,38 +36,6 @@
 
 
 </head>
-<style>
-/* p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:20px;
-} */
-/* 
-h1 {
-  color: red;
-} */
-.wrapper{
-            width: 800px;
-            margin: 0 auto;
-        }
-        table tr td:last-child{
-            width: 100px;
-        }
-        .btn {
-  background-color: #117A65;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  padding:0rem 1rem 0rem 1rem ;
-  cursor: pointer;
-  font-size: 20px;
-  margin-left:10px;
-}
-
-/* Darker background on mouse-over */
-/* .btn:hover {
-  background-color: #DC7633;
-} */
 </style>
 		
     <body>
@@ -98,9 +66,9 @@ h1 {
                     <div class="search-container" >
                      <input type="text" placeholder="Search.." name="search" id="searchInput" onkeyup="searchTable()">
                      <button type="submit"><i class="fa fa-search"></i></button>
-                       <!-- <a href="room.php" class="btn btn-success pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Rooms</a> -->
-                        <button type="submit" class="btn btn-success " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download to pdf</button>
-                    <!--<button type="submit" class="btn btn-success"  style="margin:10px"; onclick="exportTableToExcel('tblData', 'Rooms-Details-data')"> <i class="fa fa-download"></i>&nbsp;Download to Excel File</button> -->
+                       <!-- <a href="room.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Rooms</a> -->
+                        <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download to pdf</button>
+                    <!--<button type="submit" class="btn btn-dark"  style="margin:10px"; onclick="exportTableToExcel('tblData', 'Rooms-Details-data')"> <i class="fa fa-download"></i>&nbsp;Download to Excel File</button> -->
                      </div>
                           
                                  <table id="tblData" border="1" ></table>
