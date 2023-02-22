@@ -1,12 +1,11 @@
-<?php
-       include "./adminHeader.php";
-       include "./sidebar.php";
-       include "./commonlinks.php";
-       ?>
 
+<html>
+<head>
 <!-- <body class="h-0" onload=start()> -->
-<body class="h-0" >
+<!-- <body class="h-0" > -->
   <link rel="stylesheet" href="./assets/css/tenant_table.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/respo.css">
   </link>
   <!--<script type="text/javascript" src="./assets/js/tenant/delete.js"></script>-->
   <script type="text/javascript" src="./assets/js/tenant/filtertable.js"></script>
@@ -25,6 +24,16 @@
   <script type="text/javascript" src="./assets/js/tenant/validations.js"></script>
   <!-- open nav and close nav realated js is script.js -->
   <script type="text/javascript" src="./assets/js/script.js"></script>
+
+</head>
+
+<body class="smokewhite_bg_color">
+
+<?php
+       include "./adminHeader.php";
+       include "./sidebar.php";
+       include "./commonlinks.php";
+       ?>
  
  <div class="form_group mt-5 text-center">
  
@@ -44,6 +53,16 @@
         <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
 				border-radius: 20px;
                  padding: 20px;box-shadow: 5px 10px #76D7C4;">
+
+   
+        <div id="close_icon_desktop_view" >
+          <a href="tenant_table.php"> <div style="padding-left:500px">
+        <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
+          <div class="close_icon_mobile_view">
+          <a href="tenant_table.php"> <div style="padding-left:220px">
+        <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
           <form id="tenant">
             <input type="hidden" id="id_value">
             <h1>
@@ -110,7 +129,7 @@
       <div class="row">
         <div class="col-md-12 lead">
           <div class="mt-2 mb-6 clearfix">
-            <div style="margin-left:50px;width:900px">
+            <div style="margin-left:50px;width:800px">
               <center>
                 <div class="p-3 mb-2 bg text-black">Tenant Details</div>
               </center>

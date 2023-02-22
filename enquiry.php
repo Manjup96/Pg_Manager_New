@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/respo.css"></link>
 
         <!-- Favicon and touch icons -->
         <link rel="shortcut icon" href="assets/ico/favicon.png">
@@ -30,18 +31,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="./assets/css/style.css"></link>
 
+       <script type="text/javascript" src="./assets/js/script.js"></script>
+    <script type="text/javascript" src="./assets/js/enquiryFormData.js"></script>
+    <script type="text/javascript" src="./assets/js/enquiry.js"></script>
 
-       <?php
+
+
+</head>
+
+<body class="smokewhite_bg_color">
+
+<?php
             include "./adminHeader.php";
             include "./sidebar.php";
            
             include_once "./config/dbconnect.php";
         ?>
 
-
-</head>
-
-<body>
 		<div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
@@ -53,30 +59,22 @@
  </script>
 
  </div>
-   
-		
-    <body class="h-100">
+ 
     
-    <script type="text/javascript" src="./assets/js/script.js"></script>
-    <script type="text/javascript" src="./assets/js/enquiryFormData.js"></script>
-    <script type="text/javascript" src="./assets/js/enquiry.js"></script>
-    
-    <div class="container h-80 ">
-            <div class="row h-90 justify-content-center align-items-center">
-            <div class="col-10 col-md-8 col-lg-6">
-    <a href="enquiry_table.php"> <div style="margin-left:250px">
-<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
-</div>
-</div>
-</div>
- <!-- <a href="enquiry_table.php"  > <div style="margin-left:1000px">
-<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a> -->
     	<div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
 				border-radius: 20px;
                  padding: 20px;box-shadow: 5px 10px #76D7C4;">
 					<!-- Form -->
+          <div id="close_icon_desktop_view">
+          <a href="enquiry_table.php"> <div style="padding-left:500px">
+    <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
+          <div class="close_icon_mobile_view">
+          <a href="enquiry_table.php"> <div style="padding-left:220px">
+<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
                     <?php if(!empty($msg)){echo $msg; }?></p>
                     
                     <form id="enquiry" class="form-example" action="" method="post" >

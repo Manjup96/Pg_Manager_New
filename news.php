@@ -29,61 +29,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="./assets/css/style.css"></link>
+       <link rel="stylesheet" href="./assets/css/respo.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-            include_once "./config/dbconnect.php";
-        ?>
 
 
 </head>
-<style>
-/* p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:20px;
-}
 
-/* h1 {
-  color: dark;
-}  */
-.btn {
-  background-color: dark;
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  padding:0rem 1rem 1rem 1rem;
-  cursor: pointer;
-  font-size: 20px;
-}
+<body class="smokewhite_bg_color">
+<?php
+            include "./adminHeader.php";
+            include "./sidebar.php";   
 
-/* .form-group div
-    {
-      color: red;
-      size: 80%
-    }
-    .hidden
-    {
-      display:none;
-    }
-    textarea{
-    width:100%;
-    padding:15px;
-    margin-top:5px;
-    border:1px solid #7ac9b7;
-    border-radius:5px;
-    margin-bottom:10px;
-    resize:none;
-    font-size:16px;
-  } */
-</style>
-		
-    <body>
-
- 
+            include_once "./config/dbconnect.php";
+        ?>
+    
  
 
   <div class="form_group mt-5 text-center">
@@ -97,20 +57,23 @@
  </script>
 
  </div>
- <div class="container h-80 ">
-            <div class="row h-90 justify-content-center align-items-center">
-            <div class="col-10 col-md-8 col-lg-6">
-    <a href="news_table.php"> <div style="margin-left:250px">
-<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
-</div>
-</div>
-</div>
+
     	<div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
 				border-radius: 20px;
                  padding: 20px;box-shadow: 5px 10px #76D7C4;">
+
+
 					<!-- Form -->
+          <div id="close_icon_desktop_view" >
+          <a href="news_table.php"> <div style="padding-left:500px">
+<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
+          <div class="close_icon_mobile_view">
+          <a href="news_table.php"> <div style="padding-left:220px">
+<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
                     <?php if(!empty($msg)){echo $msg; }?></p>
                     
                     <form id="news" class="form-example" action="" method="post" >

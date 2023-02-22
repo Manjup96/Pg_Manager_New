@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-90">
 <head>
-<body style="background-color:#D6DBDF;">
+<!-- <body style="background-color:#D6DBDF;"> -->
   <title>Admin</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -27,25 +27,22 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="./assets/css/style.css"></link>
+       <link rel="stylesheet" href="./assets/css/respo.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-          
-        ?>
+      
 
 
 </head>
 
 		
-    <body class="h-0">
-    
+<body class="smokewhite_bg_color">
 <?php
+            include "./adminHeader.php";
+            include "./sidebar.php";   
+        ?>
+    
 
-// echo "Hello " . $_SESSION["username"] . ".<br>";
-?>
 <div class="form_group mt-5 text-center">
  
  The Selected buiding id : <b> <span id="building"></span></b>
@@ -61,6 +58,15 @@
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
 				border-radius: 20px;
                  padding: 20px;box-shadow: 5px 10px #76D7C4;">
+
+<div id="close_icon_desktop_view" >
+          <a href="enquiry_table.php"> <div style="padding-left:500px">
+        <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
+          <div class="close_icon_mobile_view">
+          <a href="enquiry_table.php"> <div style="padding-left:220px">
+        <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
   <form id="enquiry_edit">
      <input type="hidden"  id="id_value">
   <h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two">Enquiry Form</p></div></center></h1>
@@ -140,7 +146,7 @@
                 
              </br> 
 
-     <div style="margin-left:50px" id="show_table">
+     <div style="margin-left:0px" id="show_table">
       <table id="enquiry" border="1"></table>
   </div>
                     <script>

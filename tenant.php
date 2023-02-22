@@ -1,6 +1,6 @@
 <html lang="en" class="h-90">
 <head>
-<!-- <body style="background-color:#ececec;"> -->
+
 <title>tenant form</title>
 		<!-- Required meta tags -->
         <meta charset="utf-8">
@@ -27,10 +27,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
        <link rel="stylesheet" href="./assets/css/style.css"></link>
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-       <!--<script type="text/javascript" src="./assets/js/tenant/tenantFormValidation.js"></script> -->        <?php
-           
-            
-           
+       <!--<script type="text/javascript" src="./assets/js/tenant/tenantFormValidation.js"></script> -->        
+       <link rel="stylesheet" href="./assets/css/respo.css">
+
+       <?php
            include "./adminHeader.php";
             include "./sidebar.php";
            
@@ -38,19 +38,8 @@
         ?>
 
 </head>
-<!-- <style>
-  .btn {
-  background-color: red;
-  border: none;
-  color: black;
-  padding: 10px 25px;
-  padding:0rem 1rem 1rem 1rem;
-  cursor: pointer;
-  font-size: 20px;
-}
-</style> -->
 
-<body>
+<body class="smokewhite_bg_color">
 
   <div class="form_group mt-5 text-center">
  
@@ -58,37 +47,26 @@
  
 
  </div>
-
-    <!-- <body class="h-100"> -->
  
-    <div class="container h-80 ">
-            <div class="row h-90 justify-content-center align-items-center">
-            <div class="col-10 col-md-8 col-lg-6">
-    <a href="tenant_table.php"> <div style="margin-left:250px">
-<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
-</div>
-</div>
-</div>
             <div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
                 <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;border-radius: 20px;
                  padding: 20px;box-shadow: 5px 10px #76D7C4;">
-					<!-- Form -->
-                    
-                	<!-- <form class="tenantAdharForm" action="tenant_table.php" method="post" >
-                     <h1><center><div class="p-3 mb-2 bg- text-black"><p class="two">Adding Tenant Details</p></div></center></h1>
-                	
-
-                     <label for="password"> Adhar Card Number:</label>
-                      <form class="example" action="/action_page.php" style="margin:auto;max-width:100px">
-                     <input type="text" placeholder="Search.." name="search2">
-                     <button type="submit"><i class="fa fa-search"></i></button>
-                  </form> -->
+					
                 		
                 	</form>
-					<!-- Form end -->
-
+					<!-- Form start -->
+          <div id="close_icon_desktop_view" >
+          <a href="tenant_table.php"> <div style="padding-left:500px">
+<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
+          <div class="close_icon_mobile_view">
+          <a href="tenant_table.php"> <div style="padding-left:220px">
+<button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
+          </div>
           <form name="form" id="form" >
+
+          
 					<h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two">Tenant Reg Form</p></div></center></h1>
                 		
                 		
