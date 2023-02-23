@@ -63,9 +63,9 @@
     
     	<div class="container h-80 ">
             <div class="row h-90 justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
+                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
 				border-radius: 20px;
-                 padding: 20px;box-shadow: 5px 10px #76D7C4;">
+                 padding: 20px;box-shadow: 5px 10px grey;">
 					<!-- Form -->
           <div id="close_icon_desktop_view">
           <a href="enquiry_table.php"> <div style="padding-left:500px">
@@ -78,7 +78,7 @@
                     <?php if(!empty($msg)){echo $msg; }?></p>
                     
                     <form id="enquiry" class="form-example" action="" method="post" >
-					<h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two">Enquiry Form</p></div></center></h1>
+					<h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two smokewhite_bg_color">Enquiry Form</p></div></center></h1>
                 		
                 		
                 		<!-- Input fields -->

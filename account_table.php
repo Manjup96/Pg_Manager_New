@@ -32,32 +32,7 @@
         ?>
 
 </head>
-<style>
-     .btn {
-  background-color:#117A65;
-  border: box;
-  color: white;
-  padding: 12px 16px;
-  padding:0rem 1rem 1rem 1rem;
-  font-size: 22px;
-  cursor: pointer;
-}
 
-/* Darker background on mouse-over */
-.btn:hover {
-  background-color: #ABEBC6;
-}
-p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:22px;
-}
-
-h1 {
-  color: #B9770E;
-}
-
-</style> 
 
     <body class="h-100">
    

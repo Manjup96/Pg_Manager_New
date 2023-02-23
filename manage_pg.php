@@ -45,7 +45,7 @@
                 <div class="mt-2 mb-6 " style="width:850px">
                 <h1 class="heading ">Manage PG's</h1>
                 <hr>
-               <center><a href="create.php"  class="btn btn-dark m-5">+ ADD NEW PG </a></center> 
+              <a href="create.php"  class="btn btn-dark m-2 pl-1" style="margin-left:0px">+ ADD NEW PG </a>
 
                     </div>
                 </div>
@@ -58,7 +58,7 @@
              <div class="row">
                  <div class="col-md-12 lead">
                      <div class="mt-2 mb-6 clearfix">
-                     <div style="margin-left:50px;width:1600px">
+                     <div style="margin-left:0px;width:1530px">
                      <center><div class="p-3 mb-2  mr-5 bg text-black" style ="font-size:30px">Manage details</div></center>
                    
                      
@@ -66,7 +66,7 @@
  </div>
  </div>
  </br> 
- <div style="margin-left:50px" id="show_table">
+ <div style="margin-left:0px" id="show_table">
     <table id="create" border="1"></table>
   </div>
   <script>

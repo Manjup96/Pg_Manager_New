@@ -52,12 +52,6 @@
        <link rel="stylesheet" href="./assets/css/respo.css"></link>
 
 
-       <?php
-            include "./adminHeader.php";
-            include "./sidebar.php";
-           
-          
-        ?>
 
 
 </head>

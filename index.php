@@ -1,6 +1,7 @@
 <html lang="en" class="h-100">
 
-    <head><body style="background-color:#ffffff;">
+    <head>
+      
 		<!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,34 +21,28 @@
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
         </head>
-<style>
-p.two {
-  border-style: solid;
-  border-width: medium;
-  border-radius:20px;
-}
 
-h1 {
-  color: dark;
-}
-
-</style>
 <?php
 #session_start();
 #$_SESSION["username"] = $_GET['manager_name'];
 ?>
 
-    <body class="h-100">
-    
+<body class="smokewhite_bg_color">
+<?php
+            // include "./adminHeader.php";
+            // include "./sidebar.php";
+            include "./commonlinks.php";
+            // include_once "./config/dbconnect.php";
+        ?>
     	
     	<div class="container h-100 ">
             <div class="row h-100 justify-content-center align-items-center"  >
-                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 5px;border-radius: 25px;
+                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width:5px; background-color: white; border-radius: 25px;
                  padding: 20px;
   box-shadow: 10px 10px #a8a39d;">
 					<!-- Form  dashboard.php-->
                 	<form id="form" class="form-example" action="" method="post" >
-                    <h1><center><div class="p-3 mb-2 bg- text-black text-bold" ><p class="two">PG Manager Login Form</p></div></center></h1>
+                    <h1><center><div class="p-3 mb-2 text-black text-bold"><p class="two">PG Manager Login Form</p></div></center></h1>
                 		
                 		<!-- Input fields -->
                 		<div class="form-group">

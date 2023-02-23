@@ -2,7 +2,7 @@
 <html>
 <head>
    
-<body style="background-color:#D6DBDF;">
+<!-- <body style="background-color:#D6DBDF;"> -->
   <title>Admin</title>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +22,8 @@
         <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 </head>
-<body>
+		
+<body class="smokewhite_bg_color">
     
         <?php
             include "./adminHeader.php";
@@ -639,4 +640,5 @@ console.log("after accounts values");
     })
      
 </script>
+  </body> 
 </html>

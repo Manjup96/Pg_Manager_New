@@ -36,7 +36,7 @@
 
 
 </head>
-<style>
+
   <style>
     *{
     padding: 0;
@@ -51,17 +51,20 @@
     justify-content: center;
     align-items: center;
     background: url(bg-image.jpg);
+   
     background-size: cover;
 }
 
 .container{
     width: 100%;
     max-width: 650px;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
+    background-color:white;
     padding: 28px;
     margin: 0 28px;
-    border-radius: 10px;
-    box-shadow: inset -2px 2px 2px white;
+    border-radius: 20px;
+    /* box-shadow: inset -2px 2px 2px white; */
+    box-shadow: 10px 20px grey;
 }
 
 .form-title{
@@ -69,8 +72,8 @@
     font-weight: 600;
     text-align: center;
     padding-bottom: 6px;
-    color: white;
-    text-shadow: 2px 2px 2px black;
+    color: black;
+    /* text-shadow: 2px 2px 2px black; */
     border-bottom: solid 1px white;
 }
 
@@ -94,7 +97,7 @@
 
 .user-input-box label{
     width: 95%;
-    color: white;
+    color: black;
     font-size: 20px;
     font-weight: 400;
     margin: 5px 0;
@@ -110,7 +113,7 @@
 }
 
 .gender-title{
-    color:white;
+    color:black;
     font-size: 24px;
     font-weight: 600;
     border-bottom: 1px solid white;
@@ -118,7 +121,7 @@
 
 .gender-category{
     margin: 15px 0;
-    color: white;
+    color: black;
 }
 
 .gender-category label{
@@ -208,7 +211,7 @@
           <div class="user-input-box">
           <label for="state">State</label>
 
-          <select id="state" name="state">
+          <select id="state" name="state"  placeholder="state">
           <option value="AN">Select state</option>
     <option value="AN">Andaman and Nicobar Islands</option>
     <option value="AP">Andhra Pradesh</option>

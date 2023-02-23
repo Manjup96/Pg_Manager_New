@@ -372,7 +372,7 @@ function validateResponse(){
                   
                     <button style="border-width:5px;border-color:white" onclick="give_response(${r.id})">Response</button>   
                    
-              <button class="btn btn-dark" data-toggle="modal" onclick="viewDetails(${r.id})">View</button>
+              <button style="border-width:5px;border-color:white" data-toggle="modal" onclick="viewDetails(${r.id})">View</button>
              </div>
              </td>
              
