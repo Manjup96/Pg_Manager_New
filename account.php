@@ -27,18 +27,7 @@
 
        
 </head>
-<!-- <style>
-.btn {
-  background-color:dark;
-  border: box;
-  color: white;
-  padding: 12px 16px;
-  padding:0rem 1rem 1rem 1rem;
-  font-size: 22px;
-  cursor: pointer;
-}
 
-</style> -->
 
 <body class="smokewhite_bg_color">
    
@@ -50,20 +39,21 @@
             // include_once "./config/dbconnect.php";
         ?>
     	<div class="container h-90 pt-5" style="margin-right:900px ">
-            <div class="row h-90 justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-10" style="  border-style: solid;border-width: 3px;border-radius: 20px;
-                 padding: 10px;box-shadow: 5px 10px #76D7C4;">
+        <div class="row h-90 justify-content-center align-items-center">
+                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
+				border-radius: 20px;
+                 padding: 20px;box-shadow: 5px 10px grey;">
 			
                     
                 	<form class="form-example" action=".php" method="post">
-                     <h1><center><div class="p-3 mb-2 bg- text-black"><p class="two">Add Account Details</p></div></center></h1>
+                     <h1><center><div class="p-3 mb-2 bg- text-black"><p class="two smokewhite_bg_color">Add Account Details</p></div></center></h1>
                 		
  		
             
-                    <center><a href="account_income_table.php"  class="btn btn-dark mb-2" ><i class="fa fa-money"></i> Income</a>
-                    <a href="expenditure-table.php"  class="btn btn-dark mb-2 "><i class="fa fa-bars"></i> Expenditure</a>
-                    <a href="dues.php" class="btn btn-dark mb-2"><i class="fa fa-tags"></i> Dues</center></a>
-               
+                    <center><a href="account_income_table.php"  class="btn btn-dark mb-2"  style="background-color:#ececec; color:black"><i class="fa fa-money"></i> Income</a>
+                    <a href="expenditure-table.php"  class="btn btn-dark mb-2 " style="background-color:#ececec; color:black"><i class="fa fa-bars"></i> Expenditure</a>
+                    <!-- <a href="dues.php" class="btn btn-dark mb-2"><i class="fa fa-tags"></i> Dues</center></a>
+                -->
                 	</form>
 					<!-- Form end -->
                 </div>

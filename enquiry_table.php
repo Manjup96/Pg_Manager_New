@@ -54,22 +54,22 @@
 
 <div id="show_edit_form">
 <div class="container h-80 ">
-            <div class="row h-90 justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
+<div class="row h-90 justify-content-center align-items-center">
+<div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
 				border-radius: 20px;
-                 padding: 20px;box-shadow: 5px 10px #76D7C4;">
+                 padding: 20px;box-shadow: 5px 10px grey;">
 
 <div id="close_icon_desktop_view" >
           <a href="enquiry_table.php"> <div style="padding-left:500px">
         <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
           </div>
           <div class="close_icon_mobile_view">
-          <a href="enquiry_table.php"> <div style="padding-left:220px">
+          <a href="enquiry_table.php"> <div style="padding-left:200px">
         <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
           </div>
   <form id="enquiry_edit">
      <input type="hidden"  id="id_value">
-  <h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two">Enquiry Form</p></div></center></h1>
+  <h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two smokewhite_bg_color">Enquiry Form</p></div></center></h1>
   <div class="form-group">
  
                 			 <label for="enquiryUsername" class="required">Name:</label>
@@ -133,12 +133,12 @@
             <div class="row">
                 <div class="col-md-12 lead">
                     <div class="mt-2 mb-6 clearfix">
-                    <div style="margin-left:50px;width:1020px">
+                    <div style="margin-left:50px;width:1100px">
                     <center><div class="p-3 mb-2 bg text-black">Enquiry Details</div></center>
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
-                     <button type="submit" ><i class="fa fa-search" ></i></button>
+                     <button type="submit" ><i class="fa fa-search" style="color:white"; ></i></button>
                         <a href="enquiry.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Enquiry</a>
                         <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
 

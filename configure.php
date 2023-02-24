@@ -89,8 +89,8 @@ $PG_Name=$_GET['PG_Name'];
                 <div class="pt-5">
                     <right>
                         <!-- <button type="submit" name="submit">Submit</button> -->
-                         <button type="submit" class="btn btn-dark" name="submit">Submit</button> 
-                         <button><a href="manage_pg.php"  class="btn btn-danger btn-customized">Back </a></button> 
+                         <button type="submit" class="btn btn-dark text-center" name="submit">Submit</button> 
+                         <button><a href="manage_pg.php"  class="btn btn-dark text-center">Back </a></button> 
                         <!-- <button type="Back" name="Back">Back</button> -->
                 </right>
                 </div>

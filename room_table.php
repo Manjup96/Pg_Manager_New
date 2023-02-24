@@ -65,7 +65,7 @@
                    
                     <div class="search-container" >
                      <input type="text" placeholder="Search.." name="search" id="searchInput" onkeyup="searchTable()">
-                     <button type="submit"><i class="fa fa-search"></i></button>
+                     <button type="submit"><i class="fa fa-search"  style="color:white";></i></button>
                        <!-- <a href="room.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Rooms</a> -->
                         <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download to pdf</button>
                     <!--<button type="submit" class="btn btn-dark"  style="margin:10px"; onclick="exportTableToExcel('tblData', 'Rooms-Details-data')"> <i class="fa fa-download"></i>&nbsp;Download to Excel File</button> -->

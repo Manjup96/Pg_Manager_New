@@ -68,13 +68,13 @@
 
 <div id="show_edit_form">
 <div class="container h-80 ">
-            <div class="row h-90 justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
+<div class="row h-90 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
 				border-radius: 20px;
-                 padding: 20px;box-shadow: 5px 10px #76D7C4;">
+                 padding: 20px;box-shadow: 5px 10px grey;">
    <form id="meals_edit">
      <input type="hidden"  id="id_value">
-  <h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two">Meals form</p></div></center></h1>
+  <h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two smokewhite_bg_color">Meals form</p></div></center></h1>
  
                     
                         
@@ -133,7 +133,7 @@
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
-                     <button type="submit"><i class="fa fa-search"></i></button>
+                     <button type="submit"><i class="fa fa-search" style="color:white"></i></button>
                       <!--  <a href="meals.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add meals</a>  -->
                         <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
 
@@ -239,7 +239,7 @@ const url ="https://iqbetspro.com/pg-management/GET-Meals-API.php";
 
             <div style=" display: flex;justify-content: space-around;">
           
-              <button class="btn btn-dark" data-toggle="modal" onclick="viewMealsDetails(${r.id})">View</button>
+              <button style="border-width:5px;border-color:white" data-toggle="modal" onclick="viewMealsDetails(${r.id})">View</button>
              </div>
              </td>
              </tr>`;
@@ -358,7 +358,7 @@ const url ="https://iqbetspro.com/pg-management/GET-Meals-API.php";
                 <div class="modal-footer">
                 <!-- <button type="button" class="btn btn-dark" onclick="viewMealsDetails()">view</button> -->
                <!-- <button type="button" class="btn btn-dark" onclick="updateDetails()">update</button> -->  
-                <button type="button" class="btn btn-darkr" data-dismiss="modal">Close</button>   
+                <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>   
                 
                 <input type="hidden" id="hiddendata">
                 </div>

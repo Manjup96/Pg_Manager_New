@@ -109,7 +109,7 @@ h1 {
                     
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
-                     <button type="submit"><i class="fa fa-search"></i></button>
+                     <button type="submit"><i class="fa fa-search"  style="color:white";></i></button>
                         <a href="adhar_verify.php" class="btn btn-dark pull-right" style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Adhar</a>
                         <button type="submit" class="btn btn-dark " style="margin:10px"; onclick="Export()"><i class="fa fa-download"></i>&nbsp; Download</button>
 

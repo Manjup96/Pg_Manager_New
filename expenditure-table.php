@@ -45,11 +45,11 @@
 
 <div id="show_edit_form">
 <div class="container h-80">
-            <div class="row h-90 justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
+<div class="row h-90 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
 				border-radius: 20px;
-                 padding: 20px;box-shadow: 5px 10px #76D7C4;">
-  <form id="enquiry_edit">
+                 padding: 20px;box-shadow: 5px 10px grey;">
+  <!-- <form id="enquiry_edit"> -->
      <input type="hidden"  id="id_value">
   <h1><center><div class="p-3 mb-2 bg- text-black"><p class="two">Expenditure form</p></div></center></h1>
   <div class="form-group">
@@ -110,7 +110,7 @@
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search"
                       id="searchInput" onkeyup="searchTable()">
-                     <button type="submit"><i class="fa fa-search"></i></button>
+                     <button type="submit"><i class="fa fa-search" style="color:white"></i></button>
                         <a href="expenditure.php" class="btn btn-dark pull-right" 
                         style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Expenditure</a>
                         <button type="submit" class="btn btn-dark " style="margin:10px"; 
@@ -172,7 +172,7 @@
              <td>${r.Expenditure}</td>	
              <td> <div style=" display: flex;justify-content: space-around;">
           
-            <button style="border-width:5px;border-color:white" class="btn btn-sm btn-dark">View</button>         
+            <button style="border-width:5px;border-color:white" >View</button>         
            
             </div>
             </td>

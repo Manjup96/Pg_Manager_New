@@ -46,24 +46,21 @@
    
     
     	<div class="container h-90 pt-5 " style="margin-right:900px ">
-            <div class="row h-90 justify-content-center align-items-center ">
-                <div class="col-10 col-md-8 col-lg-10 bg " style="  border-style: solid;border-width: 3px;border-radius: 20px;
-                 padding: 10px;box-shadow: 5px 10px #76D7C4;">
+        <div class="row h-90 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
+				border-radius: 20px;
+                 padding: 20px;box-shadow: 5px 10px grey;">
 					<!-- Form -->
                     
                 	<form class="form-example" action=".php" method="post">
-                     <h1><center><div class="p-3 mb-2  text-black"><p class="two">Resource Details</p></div></center></h1>
+                     <h1><center><div class="p-3 mb-2  text-black"><p class="two smokewhite_bg_color">Resource Details</p></div></center></h1>
                 		
 
                     <center>
                         <!--<a href="room_setup.php"  class="btn"><i class="fa fa-home"></i> Rooms</a> -->
                        
-                        <a href="manage_pg.php"  class="btn btn-dark mb-2"><i class="fa fa-home"></i>Manage PG's </a>
+                        <a href="manage_pg.php" style="background-color:#ececec; color:black" class="btn btn-dark mb-2"><i class="fa fa-home"></i>Manage PG's </a>
                
-                        <!--<a href="configure.php"  class="btn mb-2"><i class="fa fa-home"></i>Configure PG's </a>-->
-                        <!-- <a href="configure_table.php"  class="btn mb-2"><i class="fa fa-home"></i>Configure details  </a> -->
-                    
-                        <!--<a href="manage_rooms.php"  class="btn mb-2"><i class="fa fa-home"></i>Manage rooms/beds</a>-->
                     </center>
 
                 	</form>

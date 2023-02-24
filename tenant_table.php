@@ -49,10 +49,11 @@
   <!-- Edit Form starts  -->
   <div id="show_edit_form">
     <div class="container h-80 ">
-      <div class="row h-90 justify-content-center align-items-center">
-        <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
+    <div class="row h-90 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
 				border-radius: 20px;
-                 padding: 20px;box-shadow: 5px 10px #76D7C4;">
+                 padding: 20px;box-shadow: 5px 10px grey;">
+					
 
    
         <div id="close_icon_desktop_view" >
@@ -60,7 +61,7 @@
         <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
           </div>
           <div class="close_icon_mobile_view">
-          <a href="tenant_table.php"> <div style="padding-left:220px">
+          <a href="tenant_table.php"> <div style="padding-left:190px">
         <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
           </div>
           <form id="tenant">
@@ -68,7 +69,7 @@
             <h1>
               <center>
                 <div class="p-3 mb-2 bg- text-black">
-                  <p class="two">Tenant Edit Form</p>
+                  <p class="two smokewhite_bg_color">Tenant Edit Form</p>
                 </div>
               </center>
             </h1>
@@ -138,7 +139,7 @@
                      <input type="text" placeholder="Search with Name.." name="search" id="searchInput" onkeyup="searchTable()">
 
                 <!-- <button type="submit"><i class="fa fa-search"></i></button> -->
-                <button type="submit"><i class="fa fa-search" style="color:white";></i></button>
+                <button type="submit"><i class="fa fa-search" style="color:white"></i></button>
                 <a href="tenant.php" class="btn btn-dark pull-right" style="margin:10px" ;>
                 <i  class="fa fa-plus"></i>&nbsp;Add Tenant</a>
                    
@@ -497,9 +498,9 @@ function validateComments(){
             <i class="fa fa-trash btn-outline-danger"></i></Button>
                
 
-           <button data-toggle="modal" data-target="#view-modal" 
+           <button style="border-width:5px;border-color:white" data-toggle="modal" data-target="#view-modal" 
 			      data-id="${r.id}" 
-            id="getUser" class="btn btn-sm btn-dark"><i class="glyphicon glyphicon-eye-open"></i> View</button>
+            id="getUser"><i class="glyphicon glyphicon-eye-open"></i> View</button>
             
              </div>
              </td>

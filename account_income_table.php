@@ -49,11 +49,11 @@
 
 <div id="show_edit_form">
 <div class="container h-80 ">
-            <div class="row h-90 justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;
+<div class="row h-90 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
 				border-radius: 20px;
-                 padding: 20px;box-shadow: 5px 10px #76D7C4;">
-  <form id="enquiry_edit">
+                 padding: 20px;box-shadow: 5px 10px grey;">
+  <!-- <form id="enquiry_edit"> -->
      <input type="hidden"  id="id_value">
   <h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two">Income form</p></div></center></h1>
   <div class="form-group">
@@ -114,7 +114,7 @@
                     <div class="search-container">
                      <input type="text" placeholder="Search with Name.." name="search"
                       id="searchInput" onkeyup="searchTable()">
-                     <button type="submit"><i class="fa fa-search"></i></button>
+                     <button type="submit"><i class="fa fa-search" style="color:white"></i></button>
                         <a href="account_new.php" class="btn btn-dark pull-right" 
                         style="margin:10px";><i class="fa fa-plus"></i>&nbsp;Add Income</a>
                         <button type="submit" class="btn btn-dark " style="margin:10px"; 
@@ -208,9 +208,9 @@
              <td>${r.Income}</td>	
              <td> <div style=" display: flex;justify-content: space-around;">
           
-             <button data-toggle="modal" data-target="#view-income-monthly-report-modal" 
+             <button  style="border-width:5px;border-color:white" data-toggle="modal" data-target="#view-income-monthly-report-modal" 
 			data-id="${r.Month}-${r.Year}" 
-            id="get_Month_Year" class="btn btn-sm btn-dark "><i class="glyphicon glyphicon-eye-open"></i> View</button>
+            id="get_Month_Year"  "><i class="glyphicon glyphicon-eye-open"></i> View</button>
                         </div>        
                 </div>
             </td>

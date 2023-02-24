@@ -49,9 +49,10 @@
  </div>
  
             <div class="container h-80 ">
-            <div class="row h-90 justify-content-center align-items-center">
-                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid;border-width: 3px;border-radius: 20px;
-                 padding: 20px;box-shadow: 5px 10px #76D7C4;">
+              <div class="row h-90 justify-content-center align-items-center">
+                <div class="col-10 col-md-8 col-lg-6" style="  border-style: solid; background-color: white;border-width: 3px;
+				border-radius: 20px;
+                 padding: 20px;box-shadow: 5px 10px grey;">
 					
                 		
                 	</form>
@@ -61,13 +62,13 @@
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
           </div>
           <div class="close_icon_mobile_view">
-          <a href="tenant_table.php"> <div style="padding-left:220px">
+          <a href="tenant_table.php"> <div style="padding-left:200px">
 <button style="font-size:24px"><i class="fa fa-close"></i></button></div></a>
           </div>
           <form name="form" id="form" >
 
           
-					<h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two">Tenant Reg Form</p></div></center></h1>
+					<h1><center><div class="p-3 mb-2 bg- text-black" ><p class="two smokewhite_bg_color">Tenant Reg Form</p></div></center></h1>
                 		
                 		
                 		<!-- Input fields -->

@@ -45,7 +45,9 @@
                 <div class="mt-2 mb-6 " style="width:850px">
                 <h1 class="heading ">Manage PG's</h1>
                 <hr>
-              <a href="create.php"  class="btn btn-dark m-2 pl-1" style="margin-left:0px">+ ADD NEW PG </a>
+              <!-- <a href="create.php"  class="btn btn-dark m-2 pl-1" style="margin-left:0px">+ ADD NEW PG </a> -->
+              <a href="create.php" class="btn btn-dark" style="margin:10px; background-color:#757575" >
+                <i  class="fa fa-plus"></i>&nbsp;ADD NEW PG </a>
 
                     </div>
                 </div>
@@ -140,7 +142,7 @@ tab += `<tr>
 <td>${r.address}</td>
 <td>${r.PG_Type}</td>
 <td>
-<button><a href="configure.php?PG_Name=${r.PG_Name}" class="btn btn-dark m-1">configure </a></button>
+<button><a href="configure.php?PG_Name=${r.PG_Name}"  class="btn btn-dark m-1" style="background-color:#757575">configure </a></button>
 </td>
 
 </tr>`;

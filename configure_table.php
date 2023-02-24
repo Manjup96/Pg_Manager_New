@@ -45,14 +45,14 @@
              <div class="row">
                  <div class="col-md-12 lead">
                      <div class="mt-2 mb-6 clearfix">
-                     <div style="margin-left:50px;width:1200px">
+                     <div style="margin-left:0px;width:1500px">
                      <center><div class="p-3 mb-2  mr-5 bg text-black">Configure details</div></center>
                    
                      
  </div>
  </div>
  </br> 
- <div style="margin-left:50px" id="show_table">
+ <div style="margin-left:0px" id="show_table">
     <table id="configure" border="1"></table>
   </div>
   <script>
@@ -107,7 +107,7 @@ tab += `<tr>
 <td>${r.bed}</td>
 <td>
     
-   <button><a href="manage_rooms.php?PG_Name=${r.PG_Name}&floor=${r.floor}&room=${r.room}&bed=${r.bed}" class="btn btn-dark m-1">Manage beds </a></button> 
+   <button><a href="manage_rooms.php?PG_Name=${r.PG_Name}&floor=${r.floor}&room=${r.room}&bed=${r.bed}" class="btn btn-dark m-1" style="background-color:#757575">Manage beds </a></button> 
    
    
 </td>
